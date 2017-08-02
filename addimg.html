@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/addPic.css" />
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="addPic">
+				<div class="head">
+					<p><span>系统管理</span>&gt;<span>广告图列表</span>&gt;<span class="third">添加广告图片</span><button class="fan">返回</button></p>
+				</div>
+				<form action="" method="post" enctype="multipart/form-data">
+				<div class="content">
+					<p><span>广告位模板</span><input type="text" name="ad_position"/></p>
+					<p><span>&nbsp;&nbsp;&nbsp;图片名称</span><input type="text" name="ad_name"/></p>
+					<p><span>&nbsp;&nbsp;&nbsp;链接地址</span><input type="text" name="ad_link"/></p>
+					<!--<p><span>&nbsp;&nbsp;&nbsp;上传图片</span>
+		    			<img src="__PUBLIC__img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg" class="Preview">
+		    			<input type="file" id="picPath33" onchange="prePic('picPath33')" />
+					</p>-->
+					<div class="pic">
+						<span>&nbsp;&nbsp;&nbsp;上传图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__PUBLIC__img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics iconfont icon-zhaoxiangji">请上传图片<input type="file" id="picPath1" name="ad_url" onchange="prePic('picPath1')" /></a>
+	    				</div>
+					</div>
+					<p><span>&nbsp;&nbsp;&nbsp;广告尺寸</span><input type="text" name="ad_size"/></p>
+					<p><span>&nbsp;&nbsp;&nbsp;更新时间</span><input type="text" name="ad_time"/></p>
+					<div class="operation">
+						<input type="submit" value="确定"/>
+						<input type="reset" value="取消"/>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/xiangqing.js" ></script>
+	</body>
+</html>
+<script type="text/javascript">
+	$(".fan").click(function(){
+		window.history.back();
+	})
+</script>

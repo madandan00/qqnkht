@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/add.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/addGood.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/calendar.css" />
+		<link rel="stylesheet" href="css/addGoodTip.css" />
+	</head>
+
+	<body>
+		<div class="right-content">
+			<div id="xiangqing">
+				<div class="addhead">
+					<p>
+						<span id="mdd">添加商品</span>
+					</p>
+					<p>
+						<button>返回</button>
+					</p>
+				</div>
+				<div class="base-info">
+					<div class="head"><span>基本信息</span></div>
+					<div class="good-info">
+						<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品名称</span><input type="text" /></p>
+						<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关键词</span><input type="text" /></p>
+						<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品分类</span>
+							<select>
+								<option>有机蔬菜</option>
+								<option>生鲜水果</option>
+								<option>粮油副食</option>
+								<option>肉类禽蛋</option>
+							</select>
+							<select>
+								<option>有机蔬菜</option>
+								<option>生鲜水果</option>
+								<option>粮油副食</option>
+								<option>肉类禽蛋</option>
+							</select>
+						</p>
+						<p class="third"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品货号</span><input type="text"></p>
+						<p class="four"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品价格</span><input type="text"></p>
+						<p class="five"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规格</span><input type="text"></p>
+						<p class="six"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有规格</span><input type="text"></p>
+						<p class="seven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规格标识</span><input type="text"></p>
+						<p class="eight"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态</span><input type="text"></p>
+						<p class="nine"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成本价</span><input type="text"></p>
+
+						<p class="ten"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;库存</span><input type="text"></p>
+						<p class="eleven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;折扣</span><input type="text"></p>
+						<p class="twelve"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;促销价格</span><input type="text"></p>
+						<!--<p class="thirteen"><span>是否上架销售</span><b><input type="radio" name="sj"><i>是</i></b><b><input type="radio" name="sj"><i>否</i></b></p>-->
+						<!--<p class="fourteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动上架</span><b><input type="radio" name="zdsj" value="是"><i>是</i></b><b><input type="radio" name="zdsj" value="否"><i>否</i></b>
+							<input type="text" name="" id="Date1" value="" /><em class="iconfont icon-datefrom"></em>
+							<input type="text" name="" id="Date2" value="" /><em class="iconfont icon-datefrom"></em>
+						</p>-->
+						<p class="fifteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品属性<b></span><input type="checkbox" name="sx"><i>热销</i></b><b><input type="checkbox" name="sx"><i>促销</i></b><b><input type="checkbox" name="sx" value="推荐"><i>推荐</i></b></p>
+						<p id="action" class="sixteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;活动</span><input type="radio" name="action" /><span>上新品</span><input type="radio" name="action" value="限时购"><span>限时购</span></p>
+						<p class="seventeen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标语</span><input type='radio' name='by' value='1'><i>是</i><input type="radio" name="by" value='0'><i>否</i><textarea></textarea></p>
+						<p class="eighteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量</span><input type="text"></p>
+						<p class="eighteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上架时间</span><input type="text" onclick="laydate()"></p>
+					</div>
+				</div>
+				<div class="pic">
+
+					<div class="head"><span>图片与描述</span></div>
+					<div class="mul-pic">
+						<span>商品图片</span>
+						<div class="pic-box">
+							<div class="Preview">
+								<div class="mark">删除</div>
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath0" onchange="prePic('picPath0')" value="" /></a>
+						</div>
+					</div>
+					<div class="mul-pic">
+						<span>商品图片</span>
+						<div class="pic-box">
+							<div class="Preview">
+								<div class="mark">删除</div>
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath1" onchange="prePic('picPath1')" value=""/></a>
+						</div>
+					</div>
+					<div class="mul-pic">
+						<span>详情图片</span>
+						<div class="pic-box">
+							<div class="Preview">
+								<div class="mark">删除</div>
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath21" onchange="prePic('picPath21')" value=""/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath22" onchange="prePic('picPath22')" value=""/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath23" onchange="prePic('picPath23')" value=""/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath24" onchange="prePic('picPath24')" value=""/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg" />
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath25" onchange="prePic('picPath25')" value=""/></a>
+						</div>
+					</div>
+
+					<div class="mul-pic">
+						<span>商品描述</span>
+						<textarea></textarea>
+					</div>
+					<div class="mul-pic">
+						<span>描述图片</span>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg" />
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath31" onchange="prePic('picPath31')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath32" onchange="prePic('picPath32')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview">
+								<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath33" onchange="prePic('picPath33')" /></a>
+						</div>
+
+					</div>
+				</div>
+				<div class="xq-operation">
+					<input type="submit" value="确定"></input><input type="reset" value="取消"></input>
+				</div>
+				<!--表的信息-->
+
+				<div class="good-list-info">
+					<!--表头-->
+					<div id="good-menu">
+						<ul>
+							<li class="nav1 nav">商品名称</li>
+							<li class="nav2 nav">商品图片</li>
+							<li class="nav3 nav">商品货号</li>
+							<li class="nav4 nav">单价</li>
+							<li class="nav5 nav">折扣</li>
+							<li class="nav6 nav">商品状态</li>
+							<li class="nav7 nav">库存</li>
+							<li class="nav8 nav">上架时间</li>
+							<li class="nav9 nav">添加时间</li>
+							<li class="nav10 nav">推荐</li>
+							<li class="nav11 nav">促销</li>
+							<li class="nav12 nav">热销</li>
+							<li class="nav13 nav">商品活动</li>
+							<li class="nav14 ">审核</li>
+
+						</ul>
+					</div>
+					<!--表的内容-->
+					<div id="item">
+						<ul>
+							<li class="nav1 nav">福建有机红肉蜜饯</li>
+							<li class="nav2 nav">
+								<img src="img/login/bg01.png">
+							</li>
+							<li class="nav3 nav">
+								Y123068
+							</li>
+							<li class="nav4 price nav">￥269</li>
+							<li class="nav5 discount nav">7.9折</li>
+							<li class="nav6 nav">默认上架</li>
+							<li class="nav7 has nav">1236件</li>
+							<li class="nav8 time nav">2017.03.12</li>
+							<li class="nav9 nav">添加时间</li>
+							<li class="nav10 nav"><i class="iconfont"></i></li>
+							<li class="nav11 nav"><i class="iconfont"></i></li>
+							<li class="nav12 nav"><i class="iconfont"></i></li>
+							<li class="nav13 nav">限时购</li>
+							<li class="nav14 nav">通过</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="infoDisplay">
+			<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品名称</span><input type="text" /></p>
+			<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品分类</span>
+				<select>
+					<option>有机蔬菜</option>
+					<option>生鲜水果</option>
+					<option>粮油副食</option>
+					<option>肉类禽蛋</option>
+				</select>
+				<select>
+					<option>有机蔬菜</option>
+					<option>生鲜水果</option>
+					<option>粮油副食</option>
+					<option>肉类禽蛋</option>
+				</select>
+			</p>
+			<p class="third"><span>商品货号</span><input type="text"></p>
+			<p class="four"><span>商品价格</span><input type="text"></p>
+			<p class="five"><span>规格</span><input type="text"></p>
+			<p class="six"><span>所有规格</span><input type="text"></p>
+			<p class="seven"><span>规格标识</span><input type="text"></p>
+			<p class="eight"><span>状态</span><input type="text"></p>
+			<p class="nine"><span>成本价</span><input type="text"></p>
+
+			<p class="ten"><span>库存</span><input type="text"></p>
+			<p class="eleven"><span>折扣</span><input type="text"></p>
+			<p class="opp"><span class="qd">确定</span><span class="qx">取消</span></p>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/xiangqing.js"></script>
+		<script type="text/javascript" src="js/date.js"></script>
+		<script type="text/javascript" src="js/cancelPic.js"></script>
+		<script type="text/javascript" src="js/addTip.js" ></script>
+		<script>
+			$("input:radio[name='zdsj']").on("click", function() {
+				if($("input:radio[name='zdsj']:checked").val() == "否") {
+					$("#Date1").css("display", "none");
+					$("#Date2").css("display", "none");
+					$(".icon-datefrom").css("display", "none");
+				} else {
+					$("#Date1").css("display", "block");
+					$("#Date2").css("display", "block");
+					$(".icon-datefrom").css("display", "block");
+				}
+			})
+		</script>
+	</body>
+
+</html>

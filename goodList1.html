@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/goodList.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_jyal9qmjx57gy14i.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/fenye.css" />
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="goodList">
+				<!--头部-->
+				<div class="good-list-top">
+					<div class="goodClass">
+						<div >
+							<span>一级分类</span>
+							<select id="first-class">
+								<option>有机蔬菜</option>
+								<option>生鲜水果</option>
+								<option>粮油副食</option>
+								<option>肉类禽蛋</option>
+							</select>
+						</div>
+						<div >
+							<span>二级分类</span>
+							<select>
+								<option>有机蔬菜</option>
+								<option>生鲜水果</option>
+								<option>粮油副食</option>
+								<option>肉类禽蛋</option>
+							</select>
+							
+						</div>
+						<div>
+							<span>商品名称</span>
+							<input type="text">
+						</div>
+						<div>
+							<span>商品货号</span>
+							<input type="text"/>
+						</div>
+						<button >查询</button>
+					</div>
+					<div class="good-operation">
+						<div class="top" ><a href="top.html" style="color: #f3812c;">
+							<i class="iconfont icon-zhiding2"></i>
+							<span>置顶</span></a>
+						</div>
+						<div class="second">
+							<i class="iconfont icon-daochu1 "></i>
+							<span>导出</span>
+						</div>
+						<div class="zidingyi">
+							<i class="iconfont icon-zidingyi"></i>
+							<span >自定义</span>
+						</div>
+					</div>
+				</div>
+				<!--列表-->
+				<!--表头-->
+				<div id="good-menu">
+					<ul>
+						<li class="nav1 nav">序号</li>
+						<li class="nav3 nav">图片</li>
+						<li class="nav2 nav">名称</li>						
+						<li class="nav4 nav">商品货号</li>
+						<li class="nav5 nav">单价</li>
+						<li class="nav6 nav">折扣</li>
+						<li class="nav7 nav">商品状态</li>
+						<li class="nav8 nav">库存</li>
+						<li class="nav9 nav">上架时间</li>
+						<li class="nav10 nav">商品分类1级</li>
+						<li class="nav11 nav">商品分类2级</li>
+						<li class="nav12 nav">促销</li>
+						<li class="nav13 nav">热销</li>
+						<li class="nav14 nav">销量</li>
+						<li class="nav15 " style="text-align: center;">操作</li>
+					</ul>
+				</div>
+				<!--表的内容-->
+				<div id="itemContainer">
+					
+					<ul>
+						<li class="nav1 nav">1</li>
+						<li class="nav3 nav">
+							<img src="img/goodList/goodlist01.jpg">	
+						</li>
+						<li class="nav2 nav">
+							<a href="" >福建有机红肉蜜饯</a>
+						</li>
+						
+						<li class="nav4 nav">
+							Y123068
+						</li>
+						<li class="nav5 price nav" >￥269</li>
+						<li class="nav6 discount nav">7.9折</li>
+						<li class="nav7 nav">默认上架</li>
+						<li class="nav8 has nav">1236件</li>
+						<li class="nav9 time nav">2017-03-12</li>
+						<li class="nav10 nav">水果</li>
+						<li class="nav11 nav">苹果类</li>
+						<li class="nav12 nav">
+							<i>&nbsp;</i>
+						</li>
+						<li class="nav13 nav">
+							<i>&nbsp;</i>
+						</li>
+						<li class="nav14 sell nav">1238件</li>
+						<li class="nav15 " >
+							<i class="change">修改</i>
+							<i class="cancel1">取消</i>
+							<i class="iconfont icon-zhiding top"></i>
+							<i class="jia shangjia">
+								<img src="img/shangjia.png">
+							</i>						
+							<i class="iconfont icon-cha Cancel2"></i>
+						</li>
+					</ul>
+					
+					
+					
+					
+					
+					
+					
+				</div>
+				<div id="tap">				
+				    	<div class="zs">
+							<span id="page-panel"></span>
+							<span id="page-pane2"></span>
+							<span id="page-pane3"></span>
+							<span id="page-pane4"></span>
+						</div>
+						<div class="holder" ></div>	
+				</div>
+			</div>
+			<div class="jx" id="jx">
+				<div class="jx-head" id="jx-head">
+					<span>请选择</span>
+					<i class="iconfont icon-guanbianniu jsClose"></i>
+				</div>
+				<div class="jx-xx">
+					<p><b class="iconfont icon-4"></b><span>可多选，最多选择9项</span></p>
+					<div class="jx-dx">
+					<div><input type="checkbox"/><i>序号</i></div>
+					<div><input type="checkbox" checked="checked" disabled="disabled" class="mdd"/><i>商品名称</i></div>		
+					<div><input type="checkbox"/><i>商品图片</i></div>	
+					<div><input type="checkbox"/><i>商品货号</i></div>
+					<div><input type="checkbox"/><i>单价</i></div>
+					<div><input type="checkbox" /><i>折扣</i></div>
+					<div><input type="checkbox"/><i>商品状态</i></div>
+					<div><input type="checkbox"/><i>库存</i></div>
+					<div><input type="checkbox"/><i>上架时间</i></div>
+					<div><input type="checkbox"/><i>1级商品</i></div>
+					<div><input type="checkbox"/><i>2级商品</i></div>
+					<div><input type="checkbox"/><i>促销</i></div>
+					<div><input type="checkbox"/><i>热销</i></div>
+					<div><input type="checkbox"/><i>销量</i></div>
+					</div>
+					<!--<div class="mask"></div>-->
+				</div>
+				
+				<div class="jx-jg">
+					<!--<input type="checkbox"/>		-->	
+					<p><span class="first">已选择选项</span><span class="qingkong second">清空已选项</span></p>
+					<div class="check">
+						
+					</div>
+				</div>
+				<div class="qrxz">
+					<button class="yes">确定</button><button class="no">取消</button>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jPages.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/goodList.js" ></script>
+		<script type="text/javascript" src="js/fenye.js" ></script>
+		<script type="text/javascript" src="js/drag.js" ></script>
+		<script type="text/javascript" src="laydate/laydate.js" ></script>
+		<script>
+			new drag(document.getElementById("jx-head"),document.getElementById("jx"))
+		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+#bannerPic .head {
+  overflow: hidden; }
+  #bannerPic .head input {
+    width: 120px;
+    padding: 0 3px;
+    font-size: 12px;
+    margin-right: 30px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #b3da29;
+    float: left; }
+  #bannerPic .head select {
+    width: 160px;
+    padding: 0 3px;
+    border-radius: 5px;
+    border: 1px solid #b3da29;
+    color: #666666;
+    font-size: 12px;
+    height: 20px;
+    float: left; }
+    #bannerPic .head select option {
+      color: #666666; }
+  #bannerPic .head span {
+    margin-right: 10px;
+    float: left; }
+  #bannerPic .head i {
+    float: left;
+    color: #b3da29;
+    cursor: pointer;
+    margin-right: 5px; }
+  #bannerPic .head button {
+    padding: 0px 7px;
+    height: 19px;
+    background: #b3da29;
+    border-radius: 5px;
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 30px;
+    box-shadow: 0px 1px 1px #989996; }
+
+.nav1 {
+  width: 60px; }
+
+.nav2 {
+  width: 150px; }
+
+.nav3 {
+  text-align: start;
+  width: 300px; }
+  .nav3 img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px; }
+  .nav3 img + img {
+    margin-left: 10px; }
+
+.nav5 {
+  width: 190px; }
+
+.nav6 {
+  width: 150px; }
+
+.nav8 {
+  width: 150px; }
+
+.nav9 {
+  width: 80px; }
+  .nav9 i {
+    padding: 0 3px;
+    font-size: 20px;
+    cursor: pointer; }
+  .nav9 .icon-xiugai {
+    color: #057df8; }
+  .nav9 .icon-queding {
+    color: green; }
+  .nav9 .icon-shanchu {
+    color: #f51616; }
+
+/*# sourceMappingURL=banerPic.css.map */

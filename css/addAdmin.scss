@@ -1,0 +1,77 @@
+#addAdmin{
+    width: 100%;
+    .head{
+        p{
+            .third{
+                color: #b3da29;
+            }
+            button{
+                float: right;
+                width: 50px;
+                border-radius: 5px;
+            }
+        }  
+    }
+    .content{
+        height: 580px;
+        margin-top: 20px;
+        background: #f9fbf4;
+        font-size: 12px;
+        padding: 20px 0 0 0;
+        p{
+            margin-left: 100px;
+            margin-top: 20px;
+            overflow: hidden;
+            span{
+                margin-right: 20px;
+                float: left;
+            }
+            input,select{
+                float: left;
+                width: 200px;
+                height: 20px;
+                border: 1px solid #b3da29;
+                border-radius: 5px;
+            }
+            input{
+                padding: 0 5px;
+                box-sizing: border-box;
+                font-size: 12px;
+            }
+            select{
+                padding-left: 30px;
+                box-sizing: border-box;
+                option{
+                   text-align: center; 
+                }    
+            }
+        }
+        .operation{
+            width: 560px;
+            text-align: center;
+            margin-top: 50px;
+            input{
+                padding: 0px 7px;
+                border:none;
+                cursor: pointer;  
+                border-radius: 5px;
+                font-size: 12px;
+                height: 19px;
+                box-shadow: 0px 1px 1px #989996;
+            }
+            input+input{
+              margin-left: 20px;
+            }
+            input:first-child{
+                background: #b3da29;
+                color: #fff;
+               
+            }
+            input:last-child{
+                background: #e8e8e6;
+                color: #087505;
+            }
+        }
+        
+    }
+}

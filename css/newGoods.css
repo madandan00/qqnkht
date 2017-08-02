@@ -1,0 +1,113 @@
+#newGoods .good-list-top {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  #newGoods .good-list-top .goodClass {
+    width: 850px;
+    height: 20px;
+    float: left; }
+    #newGoods .good-list-top .goodClass div {
+      float: left;
+      width: 200px; }
+      #newGoods .good-list-top .goodClass div span {
+        float: left;
+        color: #747474;
+        margin-right: 10px; }
+      #newGoods .good-list-top .goodClass div input {
+        float: left; }
+    #newGoods .good-list-top .goodClass select {
+      font-size: 12px;
+      width: 120px;
+      height: 20px;
+      float: left;
+      border: 1px solid #999999;
+      border-radius: 5px;
+      padding: 0 0 0 30px;
+      line-height: 20px; }
+    #newGoods .good-list-top .goodClass input {
+      font-size: 12px;
+      height: 20px;
+      float: left;
+      width: 120px;
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 5px;
+      border: 1px solid #999999;
+      box-sizing: border-box; }
+    #newGoods .good-list-top .goodClass button {
+      height: 20px;
+      float: left;
+      margin-left: 8px;
+      padding: 0 5px;
+      color: #fff;
+      font-size: 14px;
+      background: #b3da29;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px; }
+
+.nav1 {
+  width: 50px; }
+
+.nav2 {
+  width: 200px; }
+
+.nav3 {
+  width: 80px; }
+  .nav3 img {
+    width: 40px;
+    height: 40px; }
+
+.nav4 {
+  width: 100px; }
+
+.nav5 {
+  width: 60px; }
+  .nav5 input {
+    width: 50px; }
+
+.nav6 {
+  width: 70px; }
+  .nav6 input {
+    width: 40px; }
+
+.nav7 {
+  width: 50px; }
+
+.nav8 {
+  width: 100px; }
+  .nav8 input {
+    width: 70px; }
+
+.nav9 {
+  width: 100px; }
+  .nav9 input {
+    width: 75px; }
+
+.nav10 {
+  width: 100px; }
+
+.nav11 {
+  width: 90px; }
+
+.nav12 {
+  width: 90px; }
+
+.nav13 {
+  width: 40px; }
+
+.nav14 {
+  width: 70px; }
+  .nav14 input {
+    width: 65px; }
+  .nav14 i {
+    font-size: 18px;
+    padding: 0 3px;
+    cursor: pointer; }
+  .nav14 i:first-child {
+    color: #069f1f;
+    font-weight: bold; }
+  .nav14 i:last-child {
+    color: #0b80f8; }
+
+/*# sourceMappingURL=newGoods.css.map */

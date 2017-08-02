@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青青农客后台</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	</head>
+	<body>
+		<!--top头部-->
+		<div id="top">
+			<div class="top">
+				<ul>
+					<li><i class="ico iconfont icon-guanliyuan"></i>超级管理员</li>
+					<li><i class="ico iconfont icon-shezhi1"></i>设置</li>
+					<a href="{:U('Login/index')}"  onClick="return confirm('确定退出?');"><li><i class="ico iconfont icon-tuichu"></i>退出</li></a>
+				</ul>
+			</div>
+		</div>		
+		<!--main-->
+		<div id="main">
+			<!--侧边导航-->
+			<div id="nav">
+				<ul class="nav">
+					<li class="nav_m"><i class="ico iconfont icon-goods_manage"></i>商品管理<span class="ico iconfont icon-arrowright"></span>
+						<ul class="znav">
+							<li class="active goodslist"><a onclick="a(1)" href="">商品列表</a></li>
+							<li class="lb2"><a onclick="a(2)" href="">添加商品</a></li>
+							<li ><a class="goodClass" href="javascript:;" >商品分类</a>
+                                 <ul id="goodClass2">
+                                 	<li><a onclick="a(3)" href="">有机蔬菜</a></li>
+                                 	<li><a onclick="a(4)" href="">生鲜水果</a></li>
+                                 	<li><a onclick="a(5)" href="">粮油副食</a></li>
+                                 	<li><a onclick="a(6)" href="">肉类禽蛋</a></li>
+                                 </ul>
+							</li>
+							<li><a onclick="a(7)" href="">商品评论</a></li>
+							<li><a onclick="a(18)" href="javascript:;" class="action">活动商品</a>
+                                 <ul id="actions">
+                                 	<li><a onclick="a(8)" href="">上新品</a></li>
+                                 	<li><a onclick="a(9)" href="">限时购</a></li>
+                                 </ul>
+							</li>
+						</ul>
+					
+					</li>
+					<li class="nav_m"><i class="ico iconfont icon-dingdanguanli"></i>订单管理<span class="ico iconfont icon-arrowright"></span>
+					    <ul class="znav">
+							<li class="orderlist"><a onclick="a(10)" href="">订单列表</a></li>
+							<li><a onclick="a(11)" href="">订单查询</a></li>
+							<li><a onclick="a(12)" href="">发货列表</a></li>
+							<li><a onclick="a(13)" href="">退换货列表</a></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><i class="ico iconfont icon-caidan"></i>系统管理<span class="ico iconfont icon-arrowright"></span>
+					    <ul class="znav">
+							<li><a onclick="a(14)" href="">管理员列表</a></li>
+							<li><a onclick="a(15)" href="">广告图片管理</a></li>
+							<li><a onclick="a(16)" href="">权限管理</a></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><i class="ico iconfont icon-fangbianlogin1"></i>用户管理<span class="ico iconfont icon-arrowright"></span>
+					    <ul class="znav">
+							<li><a onclick="a(17)" href="">会员管理</a></li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--右侧内容-->
+			<div id="mainr">				
+				<iframe id='iframeId' name="ContentIframe" runat="server" src="{:U('Goodslist/index')}" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    var objContent = window.parent.frames['ContentIframe'];
+    function a(val){
+    	 switch (val) {
+            default:
+            case 1:
+                objContent.location.href = "{:U('Goods/goodList')}";
+                break;
+            case 2:
+                objContent.location.href = "{:U('Goods/addGood')}";
+                break;
+            case 3:  
+                objContent.location.href = "{:U('Goods/goodClass')}?id=1";
+                break;
+            case 4:  
+	            objContent.location.href = "{:U('Goods/goodClass')}?id=2";
+	            break;
+            case 5:  
+	            objContent.location.href = "{:U('Goods/goodClass')}?id=3";
+	            break;
+            case 6:  
+	            objContent.location.href = "{:U('Goods/goodClass')}?id=4";
+	            break;
+            case 7:  
+	            objContent.location.href = "{:U('Goods/reviews')}";
+	            break;
+            case 8:  
+	            objContent.location.href = "{:U('Goods/newGoods')}";
+	            break;
+            case 9:
+                objContent.location.href = "{:U('Goods/limited')}";
+                break;
+            case 10:             
+                objContent.location.href = "{:U('Order/orderlist')}"
+                break;
+            case 11:               
+                objContent.location.href = "{:U('Order/orderInquiry')}";
+                break;
+            case 12:               
+                objContent.location.href = "{:U('Order/orderDeliver')}";
+                break;
+            case 13:               
+                objContent.location.href = "{:U('Order/exchange')}";
+                break;
+            case 14:               
+                objContent.location.href = "";
+                break;
+            case 15:               
+            objContent.location.href = "";
+            	break;
+            case 16:               
+            objContent.location.href = "";
+            	break;
+            case 17:               
+            objContent.location.href = "{:U('Member/userManage')}";
+            	break;
+            case 18:               
+            objContent.location.href = "{:U('Goods/action')}";
+                    
+                
+
+        }	 
+    }
+
+    $(".goodClass").on("click",function(){
+    	
+    	$("#goodClass2").toggle(300);
+    	//$(".goodClass2").css("display","block")
+    })
+    $(".action").on("click",function(){
+    	
+    	$("#actions").toggle(300);
+    	//$(".goodClass2").css("display","block")
+    })
+</script>

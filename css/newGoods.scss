@@ -1,0 +1,134 @@
+#newGoods {
+    .good-list-top {
+        width: 100%;
+        overflow: hidden;
+        //background: red;
+        margin-bottom: 20px;
+        .goodClass {
+            width: 850px;
+            height: 20px;
+            float: left;
+            //background: blue;
+            div {
+                float: left;
+                width: 200px;
+                //margin-right: 20px;
+                span {
+                    float: left;
+                    color: #747474;
+                    margin-right: 10px;
+                }
+                input {
+                    float: left;
+                }
+            }
+            select {
+                font-size: 12px;
+                width: 120px;
+                height: 20px;
+                float: left;
+                border: 1px solid #999999;
+                border-radius: 5px;
+                padding: 0 0 0 30px;
+                line-height: 20px;
+            }
+            input {
+                font-size: 12px;
+                height: 20px;
+                float: left;
+                width: 120px;
+                padding: 0 5px;
+                line-height: 20px;
+                border-radius: 5px;
+                border: 1px solid #999999;
+                box-sizing: border-box;
+            }
+            button {
+                height: 20px;
+                float: left;
+                margin-left: 8px;
+                padding: 0 5px;
+                color: #fff;
+                font-size: 14px;
+                background: #b3da29;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.nav1 {
+    width: 50px;
+}
+.nav2 {
+    width: 200px;
+}
+.nav3 {
+    width: 80px;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+.nav4 {
+    width: 100px;
+}
+.nav5 {
+    width: 60px;
+    input {
+        width: 50px;
+    }
+}
+.nav6 {
+    width: 70px;
+    input {
+        width: 40px;
+    }
+}
+.nav7 {
+    width: 50px;
+}
+.nav8 {
+    width: 100px;
+    input {
+        width: 70px;
+    }
+}
+.nav9 {
+    width: 100px;
+    input {
+        width: 75px;
+    }
+}
+.nav10 {
+    width: 100px;
+}
+.nav11 {
+    width: 90px;
+}
+.nav12 {
+    width: 90px;
+}
+.nav13 {
+    width: 40px;
+}
+.nav14 {
+    width: 70px;
+    input {
+        width: 65px;
+    }
+  
+        i{
+            font-size:18px ;
+            padding:0 3px;
+            cursor: pointer;
+        }
+        i:first-child{
+            color: #069f1f;
+            font-weight: bold;
+        }
+        i:last-child{
+            color: #0b80f8;
+        }
+}

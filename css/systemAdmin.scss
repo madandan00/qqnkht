@@ -1,0 +1,66 @@
+#admin{
+    .head{
+        p{
+            i{
+                color: #b3da29;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.nav1{
+    width:60px;
+}
+.nav2{
+    width:130px;
+}
+.nav3{
+    width:110px;
+}
+.nav4{
+    width:220px;
+}
+.nav5{
+    width:130px;
+}
+.nav6{
+    width:130px;
+//  p{
+//      width: 90px;
+//      font-size: 12px;
+//      line-height: 25px;
+//      overflow: hidden;
+//      text-overflow: ellipsis;
+//      display: -webkit-box;
+//      -webkit-line-clamp: 2;
+//      -webkit-box-orient: vertical;
+//      height:50px;
+//      //background: red;
+//  }
+}
+.nav7{
+    width:110px;
+}
+.nav8{
+    width: 100px;
+    input{
+        width:90px;
+    }
+}
+.nav9{
+    width: 90px;
+    cursor: pointer;
+    i{
+        padding: 0 3px;
+    }
+    .icon-xiugai{
+         color: #057df8;
+    }
+    .icon-queding{
+        color: green;
+    }
+    .icon-shanchu{
+        color: #f51616;
+    }
+}

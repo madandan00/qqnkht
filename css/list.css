@@ -1,0 +1,46 @@
+#good-menu {
+  height: 40px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+#good-menu ul {
+  height: 100%;
+}
+#good-menu ul li {
+  float: left;
+  height: 100%;
+  line-height: 40px;
+  background: #e2f2c6;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+#itemContainer {
+  font-size: 12px;
+  width: 100%;
+  min-height: 600px;
+}
+#itemContainer ul {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+#itemContainer ul li {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #e2f2c6;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+#itemContainer ul li p {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#itemContainer ul:nth-child(2n) li {
+  background: #f9fbf3;
+}
+
+/*# sourceMappingURL=list.css.map */

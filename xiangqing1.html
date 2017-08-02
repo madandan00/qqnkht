@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/add.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/xiangqing.css" />
+		<style>
+        .calendar{font-family:Tahoma; background:#fff; float:left; border-style:solid; border-width:1px; border-color:#85BEE5 #3485C0 #3485C0 #85BEE5; position:relative; padding:10px;left:-12px;top:5px; }
+        .calendar dl,.calendar dd{margin:0; padding:0; width:183px; font-size:12px; line-height:22px;}
+        .calendar dt.title-date{ display:block; border-bottom:1px solid #E4E4E4; font-weight:700; position:relative; margin-bottom:5px; padding-bottom:3px;}
+        .calendar dt{ float:left; width:25px; margin-left:1px; text-align:center;}
+        .calendar dt.title-date{ width:100%;}
+        .calendar dd{clear: both;width: 183px;height: 139px;font-weight: 700;background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_bg.png) no-repeat; margin:0;}
+        .prevyear,.nextyear, .prevmonth,.nextmonth{cursor:pointer;height:9px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat; overflow:hidden;position:absolute; top:8px; text-indent:-999px;}
+        .prevyear{  left:4px;  width:9px;}
+        .prevmonth{ width:5px; background-position:-9px 0; left:20px;}
+        .nextyear{  width:9px; background-position:-19px 0; right:5px;}
+        .nextmonth{ width:5px; background-position:-14px 0; right:20px;}
+        .calendar dd a{float: left;width: 25px;height: 22px; color:blue; overflow: hidden; text-decoration: none;
+            margin: 1px 0 0 1px; text-align:center;}
+        .calendar dd a.disabled{color:#999;}
+        .calendar dd a.tody{ color:red; }
+        .calendar dd a.on{background:blue; color:#fff;}
+        .calendar dd a.live{cursor:pointer}
+        .input{ border:1px solid #ccc; padding:4px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat right -18px;}
+    	</style>
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="xiangqing">
+				<div class="addhead">
+					<p>
+						<span>商品管理</span>&gt;<span>商品列表</span>&gt;<span>商品详情</span>
+					</p>
+					<p>
+						<button>返回</button>
+					</p>
+				</div>
+				<div class="base-info">
+					<div class="head"><span>基本信息</span></div>
+					<div class="good-info">
+						<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品名称</span><input type="text"/></p>
+						<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品分类</span>
+						<select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+					    <select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+						</p>
+						<p class="third"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品货号</span><input type="text"></p>
+						<p class="four"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品价格</span><input type="text"></p>
+						<p class="five"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规格</span><input type="text"></p>
+						<p class="six"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成本价</span><input type="text"></p>
+						
+						<p class="seven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;库存</span><input type="text"></p>
+						<p class="eight"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;折扣</span><input type="text"></p>
+						<p class="ten"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;促销价格</span><input type="text"></p>
+						<p class="eleven"><span>是否上架销售</span><b><input type="radio" name="sj"><i>是</i></b><b><input type="radio" name="sj"><i>否</i></b></p>
+						<p class="twelve"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动上架</span><b><input type="radio" name="zdsj" value="是"><i>是</i></b><b><input type="radio" name="zdsj" value="否"><i>否</i></b>
+							<input type="text" name="" id="Date1" value="" /><em class="iconfont icon-datefrom"></em>
+							<input type="text" name="" id="Date2" value="" /><em class="iconfont icon-datefrom"></em>
+						</p>
+						<p class="thirteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品属性<b></span><input type="checkbox" name="sx"><i>热销</i></b><b><input type="checkbox" name="sx"><i>促销</i></b><b><input type="checkbox" name="sx" value="推荐"><i>推荐</i></b></p>
+						<p id="action" class="fourteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;活动</span><input type="radio" name="action"/><span>上新品</span><input type="radio" name="action" value="限时购"><span>限时购</span></p>
+						<p class="fifteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标语</span>
+							<b><input type="radio" name="by" value="1"><i>是</i></b><b><input type="radio" name="by" value="0"><i>否</i></b>
+							<textarea></textarea></p>
+						<p class="sixteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量</span><input type="text" ></p>
+						
+					</div>	
+				</div>
+				<div class="pic">
+					<div class="head"><span>图片与描述</span></div>
+					<div class="mul-pic">
+						<span>商品图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath1" onchange="prePic('picPath1')" /></a>
+	    				</div>
+					</div>
+					<div class="mul-pic">
+						<span>详情图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath21" onchange="prePic('picPath21')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath22" onchange="prePic('picPath22')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath23" onchange="prePic('picPath23')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath24" onchange="prePic('picPath24')" /></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg"/>
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath25" onchange="prePic('picPath25')" /></a>
+						</div>
+	    			</div>
+
+					<div class="mul-pic">
+						<span>商品描述</span>
+						<textarea></textarea>
+					</div>
+					<div class="mul-pic">
+						<span>描述图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg"/>
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath31" onchange="prePic('picPath31')" /></a>
+	    				</div>
+	    				<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath32" onchange="prePic('picPath32')" /></a>
+	    				</div>
+	    				<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath33" onchange="prePic('picPath33')" /></a>
+	    				</div>
+	    				
+					</div>
+				</div>
+				<div class="xq-operation">
+					<button>确定</button><button>取消</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="js/xiangqing.js" ></script>
+		<script type="text/javascript" src="js/date.js" ></script>
+	</body>
+</html>

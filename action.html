@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/action.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/list.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/fenye.css" />
+	</head>
+
+	<body>
+		<div class="right-content">
+			<div id="action">
+				<!--头部-->
+				<div class="good-list-top">
+					<div class="goodClass">
+						<form method='post' action="{:U('Goods/action')}">
+							<div>
+								<span>一级分类</span>
+								<select id="first-class" name='goods_parents'>
+									<foreach name='goodstype' item='g'>
+										<option value='{$g.type_id}'>{$g.type_name}</option>
+									</foreach>
+								</select>
+							</div>
+							<div>
+								<span>二级分类</span>
+								<select name='goods_father' id='aa'>
+
+								</select>
+
+							</div>
+							<div>
+								<span>商品名称</span>
+								<input type="text">
+							</div>
+							<div>
+								<span>商品货号</span>
+								<input type="text" />
+							</div>
+							<button>查询</button>
+						</form>
+					</div>
+				</div>
+				<!--列表-->
+				<!--表头-->
+				<div id="good-menu">
+					<ul>
+						<li class="nav1 nav">序号</li>
+						<li class="nav2 nav">商品名称</li>
+						<li class="nav3 nav">商品图片</li>
+						<li class="nav4 nav">商品货号</li>
+						<li class="nav5 nav">单价</li>
+						<li class="nav6 nav">活动</li>
+						<li class="nav7 nav">活动价格</li>
+						<li class="nav8 nav">商品状态</li>
+						<li class="nav9 nav">库存</li>
+						<li class="nav10 nav">上架时间</li>
+						<li class="nav11 nav">商品分类1级</li>
+						<li class="nav12 nav">商品分类2级</li>
+						<li class="nav13 nav">销量</li>
+						<li class="nav14 nav">操作</li>
+					</ul>
+				</div>
+				<!--表的内容-->
+				<div id="itemContainer">
+					<foreach name='goods' item='g'>
+						<ul>
+							<li class="nav1 nav">{$g.goods_id}</li>
+							<li class="nav2 nav">{$g.goods_name}</li>
+							<li class="nav3 nav">
+								<img src="__ROOT__{$g.goods_photo0}">
+							</li>
+							<li class="nav4 nav">
+								{$g.goods_odd}
+							</li>
+							<li class="nav5 price nav">￥<span>{$g.goods_price}</span></li>
+							<li class="nav6 nav">
+								<?php if ($g['goods_activity']==1) {
+							echo "上新品";
+						}if ($g['goods_activity']==2) {
+							echo "限时购";
+						}?>
+							</li>
+							<li class="nav7 special nav">￥<span>{$g.goods_formerprice}</span></li>
+							<li class="nav8 nav">{$g['goods_state']?上架:下架}</li>
+							<li class="nav9 remain nav">{$g.goods_number}</li>
+							<li class="nav10 time nav">{$g.goods_time}</li>
+							<li class="nav11 nav">{$g.goods_parentsname}</li>
+							<li class="nav12 nav">
+								<i>{$g.goods_fathername}</i>
+							</li>
+							<li class="nav13 sales nav">
+								{$g.goods_saleno}
+							</li>
+							<li class="nav14 sell nav">
+								<i name='2' class="iconfont icon-xianshizhekou " id="xianshi"></i>
+								<i name='1' class="iconfont icon-liwu" id="newGoods"></i>
+							</li>
+						</ul>
+					</foreach>
+
+				</div>
+				<div id="tap">
+					<div class="zs">
+						<span id="page-panel"></span>
+						<span id="page-pane2"></span>
+						<span id="page-pane3"></span>
+						<span id="page-pane4"></span>
+					</div>
+					<div class="holder"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="__PUBLIC__js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__js/jPages.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="__PUBLIC__js/fenye.js"></script>
+		<script type="text/javascript" src="__PUBLIC__js/action.js"></script>
+		<script type="text/javascript">
+			setTimeout(function() {
+				$("#first-class").change()
+			}, 50)
+
+			$("#first-class").change(function() {
+				$("#aa").html("")
+				var id = $("#first-class").find("option:selected").val()
+				$.ajax({
+					type: "get",
+					url: "{:U('Goods/father')}",
+					data: {
+						parent_id: id
+					},
+					dataType: "json",
+					success: function(data) {
+						var data = eval(data)
+						var len = data.length
+						for(var i = 0; i < len; i++) {
+							//console.log(data[i].type_name)
+							var html = '<option value="' + data[i].type_id + '">' + data[i].type_name + '</option>'
+							$("#aa").append(html)
+						}
+
+						//console.log(data)
+
+					}
+				});
+
+			})
+		</script>
+		<script type="text/javascript">
+			$('.iconfont.icon-xianshizhekou').on("click", function() {
+				var xh = $(this).parents().siblings(".nav1").html()
+				var name = $(this).attr("name")
+					// console.log(xh,name)
+				$.ajax({
+					type: "get",
+					url: "{:U('Goods/updateActivity')}",
+					data: {
+						goods_activity: name,
+						goods_id: xh
+					},
+					dataType: "json",
+					success: function(data) {
+						if(data == 1) {
+							window.location.reload();
+							alert('修改成功')
+						} else {
+							window.location.reload();
+							alert('活动已存在')
+						}
+					}
+				})
+			})
+
+			$('.iconfont.icon-liwu').on("click", function() {
+				var xh = $(this).parents().siblings(".nav1").html()
+				var name = $(this).attr("name")
+					// console.log(xh,name)
+				$.ajax({
+					type: "get",
+					url: "{:U('Goods/updateActivity')}",
+					data: {
+						goods_activity: name,
+						goods_id: xh
+					},
+					dataType: "json",
+					success: function(data) {
+						if(data == 1) {
+							window.location.reload();
+							alert('修改成功')
+						} else {
+							window.location.reload();
+							alert('活动已存在')
+						}
+					}
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

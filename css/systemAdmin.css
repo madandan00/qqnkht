@@ -1,0 +1,44 @@
+#admin .head p i {
+  color: #b3da29;
+  margin-right: 10px;
+  cursor: pointer; }
+
+.nav1 {
+  width: 60px; }
+
+.nav2 {
+  width: 130px; }
+
+.nav3 {
+  width: 110px; }
+
+.nav4 {
+  width: 220px; }
+
+.nav5 {
+  width: 130px; }
+
+.nav6 {
+  width: 130px; }
+
+.nav7 {
+  width: 110px; }
+
+.nav8 {
+  width: 100px; }
+  .nav8 input {
+    width: 90px; }
+
+.nav9 {
+  width: 90px;
+  cursor: pointer; }
+  .nav9 i {
+    padding: 0 3px; }
+  .nav9 .icon-xiugai {
+    color: #057df8; }
+  .nav9 .icon-queding {
+    color: green; }
+  .nav9 .icon-shanchu {
+    color: #f51616; }
+
+/*# sourceMappingURL=systemAdmin.css.map */

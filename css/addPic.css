@@ -1,0 +1,96 @@
+#addPic {
+  width: 100%; }
+  #addPic .head p .third {
+    color: #b3da29; }
+  #addPic .head p button {
+    float: right;
+    width: 50px;
+    border-radius: 5px; }
+  #addPic .content {
+    height: 620px;
+    margin-top: 20px;
+    background: #f9fbf4;
+    font-size: 12px;
+    padding: 20px 0 0 0; }
+    #addPic .content p {
+      margin-left: 120px;
+      margin-top: 20px;
+      overflow: hidden; }
+      #addPic .content p span {
+        margin-right: 20px; }
+      #addPic .content p input, #addPic .content p select {
+        width: 200px;
+        height: 20px;
+        border: 1px solid #b3da29;
+        border-radius: 5px; }
+      #addPic .content p input {
+        padding: 0 5px;
+        font-size: 12px;
+        box-sizing: border-box; }
+      #addPic .content p select option {
+        text-align: center; }
+    #addPic .content .pic {
+      margin-top: 20px;
+      overflow: hidden; }
+      #addPic .content .pic span {
+        margin-left: 120px;
+        float: left; }
+      #addPic .content .pic .pic-box {
+        float: left;
+        margin-left: 20px; }
+        #addPic .content .pic .pic-box .pics {
+          padding: 4px 10px;
+          height: 20px;
+          line-height: 20px;
+          position: relative;
+          cursor: pointer;
+          color: #888;
+          background: #fafafa;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          overflow: hidden;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1; }
+          #addPic .content .pic .pic-box .pics input {
+            margin-top: 0px;
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer; }
+        #addPic .content .pic .pic-box input {
+          margin-top: 20px; }
+    #addPic .content .operation {
+      width: 560px;
+      text-align: center;
+      margin-top: 50px;
+      overflow: hidden; }
+      #addPic .content .operation input {
+        padding: 0px 7px;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+        box-shadow: 0px 1px 1px #989996;
+        cursor: pointer; }
+      #addPic .content .operation input + input {
+        margin-left: 20px; }
+      #addPic .content .operation input:first-child {
+        background: #b3da29;
+        color: #fff; }
+      #addPic .content .operation input:last-child {
+        background: #e8e8e6;
+        color: #087505; }
+
+.Preview {
+  width: 100px;
+  height: 100px;
+  background: #f9fbf4;
+  border: 1px solid #b3da29; }
+  .Preview img {
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=addPic.css.map */

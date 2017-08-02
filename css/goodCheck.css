@@ -1,0 +1,169 @@
+#xiangqing {
+  height: 100%;
+}
+
+.good-list-top {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.good-list-top .goodClass {
+  width: 850px;
+  height: 20px;
+  float: left;
+}
+.good-list-top .goodClass div {
+  float: left;
+  width: 200px;
+  height: 21px;
+}
+.good-list-top .goodClass div span {
+  float: left;
+  color: #747474;
+  margin-right: 10px;
+}
+.good-list-top .goodClass div input {
+  float: left;
+}
+.good-list-top .goodClass select {
+  font-size: 12px;
+  width: 120px;
+  height: 20px;
+  float: left;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding: 0 0 0 30px;
+  line-height: 18px;
+  box-sizing: border-box;
+}
+.good-list-top .goodClass input {
+  font-size: 12px;
+  height: 20px;
+  width: 120px;
+  padding: 0 5px;
+  float: left;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #999999;
+}
+.good-list-top .goodClass button {
+  height: 19px;
+  float: left;
+  margin-left: 8px;
+  padding: 0 7px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  background: #b3da29;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 1px #989996;
+  box-sizing: border-box;
+}
+.good-list-top .good-operation {
+  float: right;
+  width: 210px;
+  height: 20px;
+}
+.good-list-top .good-operation div {
+  float: right;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.nav1 {
+  width: 75px;
+}
+.nav1 img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.nav2 {
+  width: 150px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav3 {
+  width: 80px;
+}
+
+.nav4 {
+  width: 60px;
+}
+
+.nav5 {
+  width: 66px;
+}
+
+.nav6 {
+  width: 80px;
+}
+
+.nav7 {
+  width: 75px;
+}
+
+.nav8 {
+  width: 90px;
+}
+
+.nav9 {
+  width: 95px;
+}
+
+.nav10 {
+  width: 60px;
+}
+
+.nav11 {
+  width: 60px;
+}
+
+.nav12 {
+  width: 60px;
+}
+
+.nav13 {
+  width: 70px;
+}
+
+.nav14 {
+  width: 70px;
+}
+.nav14 .pass {
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  background: #b3da29;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  box-shadow: 0 1px 1px #999;
+}
+
+#tap .zs {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+#tap .zs #page-pane3 {
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #666;
+}
+#tap .zs .allSum {
+  color: #ff8b00;
+}
+
+/*# sourceMappingURL=goodCheck.css.map */

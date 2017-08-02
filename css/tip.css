@@ -1,0 +1,110 @@
+#tooltip {
+  width: 380px;
+  height: 210px;
+  background: #fff;
+  position: absolute;
+  top: 300px;
+  left: 40%;
+  border: 1px solid #ccc;
+  display: none; }
+  #tooltip .tooltip_top {
+    height: 40px;
+    border-bottom: 1px dashed #ccc; }
+    #tooltip .tooltip_top .hint {
+      float: left;
+      line-height: 40px;
+      margin-left: 21px;
+      font-size: 16px;
+      color: #222; }
+    #tooltip .tooltip_top .close {
+      float: right;
+      line-height: 40px;
+      margin-right: 21px;
+      color: #929292;
+      cursor: pointer; }
+      #tooltip .tooltip_top .close i {
+        font-size: 20px; }
+  #tooltip .tool_cont .mess {
+    text-align: center;
+    font-size: 18px;
+    color: #1B1B1B;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    #tooltip .tool_cont .mess i {
+      color: #FF8B00;
+      font-size: 26px;
+      margin-right: 10px; }
+  #tooltip .tool_cont .select .sure {
+    width: 100px;
+    height: 35px;
+    background: #FF8B00;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 6px;
+    float: left;
+    margin-left: 70px;
+    cursor: pointer; }
+  #tooltip .tool_cont .select .cancel {
+    width: 100px;
+    height: 35px;
+    background: #fff;
+    color: #ccc;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 6px;
+    float: right;
+    margin-right: 70px;
+    cursor: pointer; }
+
+#failed {
+  width: 380px;
+  height: 210px;
+  background: #fff;
+  position: absolute;
+  top: 300px;
+  left: 40%;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 20000; }
+  #failed .failed_top {
+    height: 40px;
+    border-bottom: 1px dashed #ccc; }
+    #failed .failed_top .hint {
+      float: left;
+      line-height: 40px;
+      margin-left: 21px;
+      font-size: 16px;
+      color: #222; }
+    #failed .failed_top .close {
+      float: right;
+      line-height: 40px;
+      margin-right: 21px;
+      color: #929292;
+      cursor: pointer; }
+      #failed .failed_top .close i {
+        font-size: 20px; }
+  #failed .failed_cont .mess {
+    text-align: center;
+    font-size: 18px;
+    color: #1B1B1B;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    #failed .failed_cont .mess i {
+      color: #FF8B00;
+      font-size: 26px;
+      margin-right: 10px; }
+  #failed .failed_cont .select .sure {
+    width: 100px;
+    height: 35px;
+    background: #FF8B00;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 6px;
+    margin-left: 70px;
+    cursor: pointer;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=tip.css.map */

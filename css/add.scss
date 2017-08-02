@@ -1,0 +1,271 @@
+
+.base-info {
+    width: 100%;
+    font-size: 12px;
+    background: #f4f6f0;
+    padding-bottom: 40px;
+    .head {
+        width: 100%;
+        height: 40px;
+        background: #e2f2c6;
+        line-height: 40px;
+        font-size: 12px;
+        span {
+            margin-left: 15px;
+        }
+    }
+    .good-info {
+        margin-top: 5px;
+        p {
+            margin-left: 100px;
+            margin-top: 20px;
+            overflow: hidden;
+            span {
+                margin-right: 20px;
+                line-height: 20px;
+                float: left;
+                font-weight: normal;
+            }
+            input {
+                width: 180px;
+                height: 18px;
+                border: 1px solid #b3da29;
+                border-radius: 4px;
+                padding: 0 5px;
+                font-size: 12px;
+                box-sizing: border-box;
+            }
+            em{
+                line-height: 20px;
+            }
+            textarea{
+                width: 180px;
+                height: 50px;
+                padding: 0 10px;
+                font-size: 12px;
+                border: 1px solid #b3da29;
+                border-radius: 4px;
+                box-sizing: border-box;
+                display: block;
+            }
+        }
+       .first {
+            input {
+                width: 250px;
+            }
+        }
+        .second {
+            select {
+                width: 120px;
+                height: 20px;
+                font-size: 12px;
+                border: 1px solid #b3da29;
+                border-radius: 4px;
+            }
+            select+select {
+                margin-left: 30px;
+            }
+        }
+        .thirteen,
+        .fourteen,.fifteen,.seventeen,.twenty {
+            overflow: hidden;
+            span {
+                float: left;
+            }
+            i {
+                float: left;
+                padding: 0 10px;
+            }
+            input {
+                width: 15px;
+                float: left;
+            }
+            b {
+                overflow: hidden;
+                float: left;
+            }
+            b+b {
+                margin-left: 20px;
+            }
+            em {
+                float: left;
+                margin-left: -20px;
+                color: #b3da29;
+            }
+        }
+        .fourteen {
+            #Date1,
+            #Date2 {
+                width: 100px;
+            }
+            #Date2 {
+                margin-left: 30px;
+            }
+        }
+        .twenty{
+            #Date1,
+            #Date2 {
+                width: 100px;
+            }
+        }
+        .fifteen {
+            overflow: hidden;
+            span {
+                float: left;
+            }
+            i {
+                float: left;
+                padding: 0 10px;
+            }
+            input {
+                width: 15px;
+                float: left;
+            }
+            b {
+                overflow: hidden;
+                float: left;
+            }
+            b+b {
+                margin-left: 20px;
+            }
+        }
+        
+        #action{
+            overflow: hidden;
+            input{
+                width: 15px;
+                float: left;
+            }
+            span{
+                float: left;
+            }
+        }
+        
+    }
+}
+.pic {
+    width: 100%;
+    background: #f4f6f0;
+    padding-bottom: 30px;
+    .head {
+        width: 100%;
+        height: 40px;
+        background: #e2f2c6;
+        line-height: 40px;
+        span {
+            font-size: 12px;
+            margin-left: 15px;
+            font-weight: normal;
+        }
+    }
+    .mul-pic {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+        span {
+            margin-left: 120px;
+            float: left;
+            margin-right: 20px;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        input {
+            float: left;
+            width: 100px;
+            height: 20px;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        .pic-box {
+            float: left;
+            .Preview {
+                border: 1px solid #b3da29;
+            }
+            .pics{
+                   font-weight: normal;
+                    padding: 4px 15px;
+                    height: 20px;
+                    line-height: 20px;
+                    position: relative;
+                    cursor: pointer;
+                    color: #888;
+                    background: #fafafa;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    input{
+                        margin-top: 0px;
+                        position: absolute;
+                        font-size: 100px;
+                        right: 0;
+                        top: 0;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        cursor: pointer;
+                    }
+                }
+            
+        }
+        .pic-box+.pic-box {
+            margin-left: 20px;
+        }
+        textarea {
+            padding: 10px;
+            width: 580px;
+            height: 80px;
+            font-size: 12px;
+            border: 1px solid #b3da29;
+        }
+    }
+}
+.xq-operation {
+    width: 200px;
+    height: 30px;
+    margin: 30px auto;
+    background: #fefefe;
+   input {
+        width: 80px;
+        height: 30px;
+        border: none;
+        box-shadow: 0px 1px 1px #989996;
+        cursor: pointer;
+    }
+    input+input {
+        margin-left: 20px;
+    }
+    input:first-child {
+        background: #b3da29;
+        color: #fff;
+        border-radius: 5px;
+    }
+    input:last-child{
+        background: #e8e8e6;
+        color: #087505;
+        border-radius: 5px;
+    }
+}
+.Preview {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.mark{
+    width:100%;
+    height: 100%;
+    display: none;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 100px;
+    color: #fff;
+}

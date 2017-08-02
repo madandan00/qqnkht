@@ -1,0 +1,128 @@
+.right-content {
+  background: #fefefe; }
+
+#deliver {
+  width: 100%; }
+  #deliver .head {
+    height: 20px;
+    overflow: hidden; }
+    #deliver .head .condition {
+      float: left;
+      height: 20px; }
+      #deliver .head .condition span {
+        margin-right: 10px;
+        float: left; }
+      #deliver .head .condition input {
+        height: 20px;
+        padding: 0 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        box-sizing: border-box;
+        float: left;
+        border: 1px solid #999999; }
+      #deliver .head .condition .first {
+        width: 160px;
+        margin-right: 30px; }
+      #deliver .head .condition .second, #deliver .head .condition .third {
+        width: 110px;
+        font-size: 12px; }
+      #deliver .head .condition .sub {
+        border: none;
+        cursor: pointer; }
+      #deliver .head .condition em {
+        margin-left: -20px;
+        color: #b3da29;
+        float: left; }
+      #deliver .head .condition i {
+        padding: 0 10px;
+        float: left; }
+      #deliver .head .condition .sub {
+        font-size: 12px;
+        height: 19px;
+        padding: 0px 7px;
+        background: #b3da29;
+        color: #fff;
+        margin-left: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 1px 1px #989996;
+        float: left; }
+    #deliver .head .good-operation {
+      float: right;
+      width: 210px;
+      height: 20px; }
+      #deliver .head .good-operation div {
+        float: left;
+        padding: 0 8px;
+        cursor: pointer; }
+      #deliver .head .good-operation div:first-child {
+        color: #f27507; }
+      #deliver .head .good-operation div:last-child {
+        color: #f2d23b; }
+  #deliver #good-menu {
+    margin-top: 20px; }
+
+.nav1 {
+  width: 55px; }
+
+.nav2 {
+  width: 80px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav3 {
+  width: 85px; }
+
+.nav4 {
+  width: 100px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav5 {
+  width: 110px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav6 {
+  width: 45px; }
+  .nav6 input {
+    width: 45px; }
+
+.nav7 {
+  width: 270px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .nav7 input {
+    width: 260px; }
+
+.nav8 {
+  width: 105px; }
+  .nav8 input {
+    width: 100px; }
+
+.nav9 {
+  width: 80px; }
+
+.nav10 {
+  width: 80px; }
+
+.nav11 {
+  width: 70px; }
+  .nav11 i {
+    padding: 0 5px;
+    cursor: pointer; }
+  .nav11 i:last-child {
+    color: #f51616; }
+  .nav11 .icon-xiugai {
+    color: #1183f8; }
+  .nav11 .icon-queding {
+    color: green; }
+
+/*# sourceMappingURL=deliver.css.map */

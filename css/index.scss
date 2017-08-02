@@ -1,0 +1,134 @@
+body{
+    background: #fcd8ae;
+}
+#top{
+    height: 78px;
+    width: 100%;
+    background: #b3da29;
+    border-bottom: 2px solid #b0aeae;
+    .top{
+        width: 1320px;
+        margin: 0 auto;
+        height: 78px;
+        background: url(../img/index/logo.png) no-repeat 0 10px;
+        ul{
+            float: right;
+            margin-top: 25px;
+            li{
+                text-align: center;
+                line-height: 20px;
+                height: 20px;
+                float: left;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+                padding: 0 20px;
+                border-right: 1px solid #fff;
+                i{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+            li:last-child{
+                border-right: none;
+            }
+        }
+    }
+}
+#main{
+    width: 1320px;
+    height: 712px;
+    margin: 0 auto;   
+    margin-top: 20px;
+    #nav{
+        width: 180px;
+        height: 880px;
+        background: #fbfcf7;
+        float: left;
+        .nav{
+            .nav_m{
+                text-align: center;
+                overflow: hidden;
+                line-height: 50px;
+                
+                cursor: pointer;
+                em{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                .ico1{
+                    margin-right: 13px;
+                }
+                .ico2{
+                    margin-left: 26px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .znav{
+            display: none;
+            background: #fffefc;
+            strong{
+                color: #999;   
+            }
+            .active strong{
+                 color: #fa951f;
+            }
+            
+            li{
+                font-size: 12px;
+                line-height: 33px;
+                cursor: pointer;
+                color: #999;
+                text-align: left;
+                margin-left: 60px;
+                ul{
+                    li{
+                        margin-left: 10px;
+                    }
+                    
+                    .active strong{
+                        color: #fa951f; 
+                    }
+                }
+                b{
+                    font-weight: normal;
+                    
+                     span{
+                        margin-left: 10px;
+                        font-size: 14px;
+                    }
+                }
+                ul{
+                   // margin-left: 20px;
+                    font-size: 20px;
+                    display: none;
+                    i{
+                       font-size: 12px;
+                        line-height: 33px;
+                        cursor: pointer;
+                        color: #999; 
+                    }
+                    li{
+                        font-size: 11px;
+                        line-height: 25px;
+                        cursor: pointer;
+                        color: #999; 
+                    }
+                }
+            }
+            
+        }
+    }
+    #mainr{
+        width: 1134px;
+        min-height: 880px;
+        background: #fefefe;
+        float: right;
+        iframe {
+            overflow-y: scroll;
+            height: 100%;
+        }
+    }
+}
+

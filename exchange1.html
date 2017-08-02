@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/exchange.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/fenye.css" />
+		<style>
+        .calendar{font-family:Tahoma; background:#fff; float:left; border-style:solid; border-width:1px; border-color:#85BEE5 #3485C0 #3485C0 #85BEE5; position:relative; padding:10px;left:-12px;top:5px; }
+        .calendar dl,.calendar dd{margin:0; padding:0; width:183px; font-size:12px; line-height:22px;}
+        .calendar dt.title-date{ display:block; border-bottom:1px solid #E4E4E4; font-weight:700; position:relative; margin-bottom:5px; padding-bottom:3px;}
+        .calendar dt{ float:left; width:25px; margin-left:1px; text-align:center;}
+        .calendar dt.title-date{ width:100%;}
+        .calendar dd{clear: both;width: 183px;height: 139px;font-weight: 700;background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_bg.png) no-repeat; margin:0;}
+        .prevyear,.nextyear, .prevmonth,.nextmonth{cursor:pointer;height:9px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat; overflow:hidden;position:absolute; top:8px; text-indent:-999px;}
+        .prevyear{  left:4px;  width:9px;}
+        .prevmonth{ width:5px; background-position:-9px 0; left:20px;}
+        .nextyear{  width:9px; background-position:-19px 0; right:5px;}
+        .nextmonth{ width:5px; background-position:-14px 0; right:20px;}
+        .calendar dd a{float: left;width: 25px;height: 22px; color:blue; overflow: hidden; text-decoration: none;
+            margin: 1px 0 0 1px; text-align:center;}
+        .calendar dd a.disabled{color:#999;}
+        .calendar dd a.tody{ color:red; }
+        .calendar dd a.on{background:blue; color:#fff;}
+        .calendar dd a.live{cursor:pointer}
+        .input{ border:1px solid #ccc; padding:4px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat right -18px;}
+    	</style>
+	</head>
+	<body>
+		<div id="orderInquiry">
+			<div class="inquiryCondition">
+				<div><span>商品名称</span><input type="text"/></div>
+				<div><span>会员名称</span><input type="text"></div>
+				<div><span>订单状态</span>
+					
+					<select style="margin:-2;width:164;height: 24;">
+						<option>已下单未付款</option>
+						<option>已完成交易</option>
+						<option>已经退款</option>
+					</select>
+					
+				</div>
+				<div>
+					<span>&nbsp;&nbsp;&nbsp;订单号</span>
+					<input type="number">
+				</div>
+				<div class="five">
+					<div >
+						<span>下单时间</span>
+						<input type="text" name="" id="Date1" value="" /><em class="iconfont icon-datefrom"></em>
+						<span>至</span>
+						<input type="text" name="" id="Date2" value="" /><em class="iconfont icon-datefrom"></em>
+					</div>
+				</div>
+			</div>
+			<div class="inquiry">
+				<input type='submit' name='sub' class="sub" value='查询'>
+				<input type='reset' name='res' class="res" value='取消'>
+			</div>
+			<!--表头-->
+			<div id="good-menu">
+					<ul>
+						<li class="nav1 nav">序号</li>
+						<li class="nav2 nav">订单号</li>
+						<li class="nav3 nav">商品信息</li>
+						<li class="nav4 nav">下单时间</li>
+						<li class="nav5 nav">申请人</li>
+						<li class="nav6 nav">数量</li>
+						<li class="nav7 nav">订单金额</li>
+						<li class="nav8 nav">服务类型</li>
+						<li class="nav9 nav">审核状态</li>
+						<li class="nav10 nav">订单状态</li>
+						<li class="nav12 nav">申请时间</li>
+						<li class="nav13 nav">操作</li>
+					</ul>
+			</div>
+			<!--表的内容-->
+			<div id="itemContainer">
+					<ul>
+						<li class="nav1 nav">1</li>
+						<li class="nav2 nav">1000200123</li>
+						<li class="nav3" >
+							<p class="goodName">福建有机红肉蜜柚</p>
+							<p class="goodClass">Y123068</p>
+						</li>
+						<li class="nav4" >
+							2013.9.3
+						</li>
+						<li class="nav5" >
+							<p>李白</p>
+							<p>178****9999</p>
+						</li>
+						<li class="nav6 nav">
+							1
+						</li>
+						<li class="nav7 nav" >
+							￥<span>230</span>
+						</li>
+						<li class="nav8  nav">
+							退货
+						</li>
+						<li class="nav9 nav" >未审核</li>
+						<li class="nav10 nav">换货商品已寄出</li>
+						<li class="nav12 nav">
+							<p>2017-02-06</p>
+						</li>	
+						<li class="nav13 nav">
+							<i class="iconfont icon-xiugai"></i>
+							<i class="iconfont icon-shanchu"></i>
+						</li>
+					</ul>
+					
+			</div>
+			<div id="tap">				
+				    <div class="zs">
+						<span id="page-panel"></span>
+						<span id="page-pane2"></span>
+						<span id="page-pane3"></span>
+						<span id="page-pane4"></span>
+					</div>
+					<div class="holder" ></div>	
+		    </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js" ></script>
+	<script type="text/javascript" src="js/date.js" ></script>
+	<script src="js/jPages.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/fenye.js" ></script>
+</html>

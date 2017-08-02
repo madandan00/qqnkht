@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/fenye.css" />
+		<link rel="stylesheet" href="css/goodCheck.css" />
+		<link rel="stylesheet" href="css/addGoodTip.css" />
+	</head>
+
+	<body>
+		<div id="mark1" style="width: 100%;height: 100%;background: rgba(0,0,0,0.3);position: fixed;right: 0;top:0;display: none;">
+
+		</div>
+		<div class="right-content">
+			<div id="xiangqing">
+
+				<div class="good-list-top">
+					<div class="goodClass">
+						<form method="post" action="{:U('Goods/goodList')}">
+
+							<div>
+
+								<span>商品名称</span>
+								<input type="text" name="goods_name" value="" />
+
+							</div>
+							<div>
+								<span>商品货号</span>
+								<input type="text" name='goods_odd' value=''>
+
+							</div>
+							<button>查询</button>
+						</form>
+
+					</div>
+					<div class="good-operation">
+						<!--<div class="zidingyi" style="color: #178fe3;">
+							<i class="iconfont icon-zidingyi"></i>
+							<span>自定义</span>
+						</div>-->
+						<div style="color: #f2d031;">
+							<i class="iconfont icon-daochu1"></i>
+							<span>导出</span>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="good-list-info">
+					
+					
+					
+					<table>
+						
+					<!--表头-->
+						<thead>
+							<tr height="50">
+								<th class="nav1 nav">图片</th>
+								<th class="nav2 nav">商品名称</th>
+								<th class="nav3 nav">商品货号</th>
+								<th class="nav4 nav">单价</th>
+								<th class="nav5 nav">折扣</th>
+								<th class="nav6 nav">商品状态</th>
+								<th class="nav7 nav">库存</th>
+								<th class="nav8 nav">上架时间</th>
+								<th class="nav9 nav">添加时间</th>
+								<th class="nav10 nav">推荐</th>
+								<th class="nav11 nav">促销</th>
+								<th class="nav12 nav">热销</th>
+								<th class="nav13 nav">商品活动</th>
+								<th class="nav14 ">审核</th>
+							</tr>
+						</thead>
+					<!--表的内容-->
+						<tbody id="itemContainer">
+							<tr height="50">
+								<td class="nav1 nav">
+									<img src="img/login/bg01.png">
+								</td>
+								<td class="nav2 nav">福建有机红肉蜜饯</td>
+
+								<td class="nav3 nav">
+									Y123068
+								</td>
+								<td class="nav4 price nav">￥269</td>
+								<td class="nav5 discount nav">7.9折</td>
+								<td class="nav6 nav">默认上架</td>
+								<td class="nav7 has nav">1236件</td>
+								<td class="nav8 time nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav9 nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav10 nav"><i class="iconfont"></i></td>
+								<td class="nav11 nav"><i class="iconfont"></i></td>
+								<td class="nav12 nav"><i class="iconfont"></i></td>
+								<td class="nav13 nav">限时购</td>
+								<td class="nav14 nav">
+									<span class="pass">通过</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="nav1 nav">
+									<img src="img/login/bg01.png">
+								</td>
+								<td class="nav2 nav">福建有机红肉蜜饯</td>
+
+								<td class="nav3 nav">
+									Y123068
+								</td>
+								<td class="nav4 price nav">￥269</td>
+								<td class="nav5 discount nav">7.9折</td>
+								<td class="nav6 nav">默认上架</td>
+								<td class="nav7 has nav">1236件</td>
+								<td class="nav8 time nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav9 nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav10 nav"><i class="iconfont"></i></td>
+								<td class="nav11 nav"><i class="iconfont"></i></td>
+								<td class="nav12 nav"><i class="iconfont"></i></td>
+								<td class="nav13 nav">限时购</td>
+								<td class="nav14 nav">
+									<span class="pass">通过</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="nav1 nav">
+									<img src="img/login/bg01.png">
+								</td>
+								<td class="nav2 nav">福建有机红肉蜜饯</td>
+
+								<td class="nav3 nav">
+									Y123068
+								</td>
+								<td class="nav4 price nav">￥269</td>
+								<td class="nav5 discount nav">7.9折</td>
+								<td class="nav6 nav">默认上架</td>
+								<td class="nav7 has nav">1236件</td>
+								<td class="nav8 time nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav9 nav">
+									<span>2017.12.12</span>
+								</td>
+								<td class="nav10 nav"><i class="iconfont"></i></td>
+								<td class="nav11 nav"><i class="iconfont"></i></td>
+								<td class="nav12 nav"><i class="iconfont"></i></td>
+								<td class="nav13 nav">限时购</td>
+								<td class="nav14 nav">
+									<span class="pass">通过</span>
+								</td>
+							</tr>
+						</tbody>
+
+					</table>
+
+				</div>
+				<div id="tap" style="height: 100px;">
+					<div class="zs">
+						<span id="page-panel"></span>
+						<span id="page-pane2"></span>
+						<span id="page-pane3"></span>
+						<span id="page-pane4"></span>
+					</div>
+					<div class="holder"></div>
+				</div>
+			</div>
+		</div>
+		<div id="infoDisplay">
+			<input type="hidden" class="mdd0" />
+			<p class="first">
+				<span>商品名称</span><input type="text" class="val1" style="width: 285px;" />
+				<span>上架时间</span><input type="text" onclick="laydate()" class="Ttime" />
+			</p>
+			<p class="second"><span>商品分类</span>
+				<select class="chose1" name='goods_parents' id="goodsf2">
+
+				</select>
+				<select style="margin-left: 20px;" class="chose2" id="aa1" name='goods_father'>
+
+				</select>
+			</p>
+			<p class="third">
+				<span>商品价格</span><input type="text" class="val3">
+				<span>商品货号</span><input type="text" class="val2">
+				<span>关键字</span><input type="text" class="keyWord">
+			</p>
+			<p class="four">
+				<span>规格</span><input type="text" class="val4">
+				<span>所有规格</span><input type="text" class="val5">
+				<span>规格标识</span><input type="text" class="val6">
+			</p>
+			<p class="five">
+				<span>成本价</span><input type="text" class="val10">
+				<span>促销价格</span><input type="text" class="salePrice">
+				<span>折扣</span><input type="text" class="val12">
+			</p>
+			<p class="six">
+				<span>库存</span><input type="text" class="val11">
+				<span>销量</span><input type="text" class="saleNum">
+				<span>存储方式</span><input type="text" class="val7">
+			</p>
+			<p class="six">
+				<span>品牌</span><input type="text" class="val9">
+				<span>产地</span><input type="text" class="val8">
+
+			</p>
+			<p class="six">
+				<span>商品描述</span>
+				<textarea class="goodDescribe"></textarea>
+
+			</p>
+			<p class="opp"><span class="qd">确定</span><span class="qx">取消</span></p>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script src="js/jPages.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="laydate/laydate.js"></script>
+		<script type="text/javascript" src="js/addTip.js"></script>
+		<script>
+			//分页插件
+			$(".holder").jPages({
+				containerID: "itemContainer",
+				//		first: '首页',
+				//		last: '尾页',
+				previous: '上一页',
+				next: '下一页',
+				perPage: 1,
+				startPage: 1,
+				startRange: 2,
+				midRange: 3,
+				endRange: 2,
+				animation: 'wobble',
+				keyBrowse: true,
+				callback: function(pages, items) {
+					//			$("#page-panel").html("当前页面:" + pages.current);
+					//$("#page-pane2").html("共" + pages.count + "页");
+					$("#page-pane3").html("商品总数&nbsp;:&nbsp;" + '<span class="allSum">' + items.count + "</span>");
+					//			$("#page-pane4").html("每页数量:" + items.count / pages.count);
+
+				}
+			});
+		</script>
+		<script>
+			setTimeout(function() {
+				$("#goodsf2").change()
+			}, 50)
+			$("#goodsf2").change(function() {
+				$("#aa1").html("")
+				var id = $("#goodsf2").find("option:selected").val()
+				$.ajax({
+					type: "get",
+					url: "{:U('Goods/father')}",
+					data: {
+						parent_id: id
+					},
+					dataType: "json",
+					success: function(data) {
+						var data = eval(data)
+						var len = data.length
+						for(var i = 0; i < len; i++) {
+							//console.log(data[i].type_name)
+							var html = '<option value="' + data[i].type_id + '">' + data[i].type_name + '</option>'
+							$("#aa1").append(html)
+						}
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

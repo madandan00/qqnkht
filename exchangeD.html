@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>换货详情</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/exchangeD.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="exchangeDetail">
+				<div class="head">
+					<p class="first">
+						<span>订单管理</span>&gt;<span>退换货列表</span>&gt;<span class="third">换货详情</span>
+					</p>
+					<p class="second">
+						<button id='goback'>返回</button>
+					</p>
+				</div>
+				<input id='inp' value='{$order.order_id}' type="hidden">
+				<div class="content">
+					<div class="orderInfo">
+						<div class="tit"><span>下单信息</span></div>
+						<div class="seconds">
+							<p><span>商品名称:</span><i>{$order.goods_name}</i></p>
+							<p><span>商品货号:</span><i>{$order.goods_odd}</i></p>
+							<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价:</span><i>￥<em>{$order.goods_price}</em></i></p>
+							<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量:</span><i>{$order.goods_number}</i></p>
+							<p><span>买家账号:</span><i >{$order.person_account}</i></p>
+							<p><span>&nbsp;&nbsp;&nbsp;收货人:</span><i class="address">李白</i></p>
+							<p><span>联系电话:</span><i>{$order.order_phone}</i></p>
+							<p><span>收货地址:</span><i>{$order.order_address}</i></p>
+							<p><span>下单时间:</span><i>{$order.order_time}</i></p>
+							<p><span>&nbsp;&nbsp;&nbsp;订单号:</span><i>{$order.order_name}</i></p>
+							<p><span>交易金额:</span><i>商品价格</i><i>￥<em class="price1">{$order.goods_price}</em></i><i>数量</i><em class="num">{$order.goods_number}</em><i>邮费</i><i>￥<em class="price2">{$order.return_postage}</em></i><i>总费用</i><i>￥<em class="AllPrice">{$order.order_money}</em></i></p>
+						</div>
+
+						
+					</div>
+					<div class="exchangeInfo">
+						<div class="tit"><span>退/换货信息</span></div>
+						<div class="seconds">
+							<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务类型:</span><i>{$order.service_type}</i></p>
+							<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单状态:</span><i id='order_state' class="orderStates">{$order.order_state}</i><b class="iconfont icon-zidingyi orderState"></b></p>
+							<p class="third"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;退货原因:</span><i>{$order.return_cause}</i></p>
+							<p class="four"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;退货凭证:</span><img src=""/><img src=""/></p>
+							<p class="five"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注:</span><i >{$order.return_remark}</i></p>
+							<p class="six"><span>换货商品名称:</span><i id='exchange_goods' class="goodNames">{$order.exchange_goods}</i><b class="iconfont icon-zidingyi goodName"></b></p>
+							<p class="seven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量:</span><i id='exchange_number' class="nums">{$order.exchange_number}</i><b class="iconfont icon-zidingyi num"></b></p>
+							<p class="eight"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;换货金额:</span><i>￥<em id='exchange_money' class="exchangeMoneys">{$order.exchange_money}</em></i><b class="iconfont icon-zidingyi exchangeMoney"></b></p>
+							<p class="nine"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;差价:</span><i>￥<em class="differences"></em></i></p>
+							<p class="ten"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请时间:</span><i>{$order.application_date}</i></p>
+							<p class="eleven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请状态:</span><i id='application_states' class="applyStates">{$order.application_states}</i><b class="iconfont icon-zidingyi applyState"></b></p>
+						</div>
+					</div>
+					<div class="logisticsInfo">
+						<div class="tit"><span>物流信息</span></div>
+						<div class="seconds">
+							<p><span>物流公司:</span><i id='return_company' class="Express">{$order.return_company}</i><b class="iconfont icon-zidingyi express"></b></p>
+							<p><span>快递单号:</span><i id='courier_number' class="kddhc">{$order.courier_number}</i><b class="iconfont icon-zidingyi kddh"></b></p>
+						</div>
+					</div>
+					<p class="operation">
+						<input id='sub' type="submit"  value="修改"/>
+						<!-- <input type="reset" value="取消"/> -->
+					</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/exchangeD.js" ></script>
+		<script>
+//			if($(".orderState").hasClass("icon-queding")||$(".backCash").hasClass("icon-queding")||$(".applyState").hasClass("icon-queding")||$(".express").hasClass("icon-queding")||$(".kddh").hasClass("icon-queding")||){
+//				
+//			}
+			$("#goback").click(function(){
+					window.history.go(-1);
+				})
+			$("#sub").click(function(){
+					var order_state = $('#order_state').html();
+					var exchange_goods     = $('#exchange_goods').html();
+					var exchange_number   = $('#exchange_number').html();
+					var exchange_money     = $('#exchange_money').html();
+					var application_states       = $('#application_states').html();
+					var return_company       = $('#return_company').html();
+					var courier_number       = $('#courier_number').html();
+					var order_id        = $('#inp').attr("value")
+					console.log(order_id,order_state,exchange_goods,exchange_number,exchange_money,application_states,return_company,courier_number);
+					 $.post("{:U('Order/updateExchangeD')}","order_state="+order_state+"&exchange_goods="+exchange_goods+"&exchange_number="+exchange_number+"&exchange_money="+exchange_money+
+					 	"&application_states="+application_states+"&return_company="+return_company+"&courier_number="+courier_number+"&order_id="+order_id,
+					 	function(data){
+					 	
+					 	if (data==1) {
+					 		location.href = "{:U('Order/exchange')}"
+					 		alert('修改成功')
+
+					 	}else{
+					 		alert('修改失败')
+						}
+		  			              },"json")
+				})
+		</script>
+	</body>
+</html>

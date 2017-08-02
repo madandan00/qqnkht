@@ -1,0 +1,109 @@
+body {
+  background: url(../img/login/bg01.png) no-repeat center center;
+  background-size: cover; }
+
+#main {
+  width: 1200px;
+  height: 850px;
+  margin: 0 auto; }
+  #main .main_l {
+    width: 50%;
+    height: 850px;
+    background: url(../img/login/logo.png) no-repeat center 300px;
+    float: left; }
+  #main .main_r {
+    width: 50%;
+    height: 850px;
+    float: left;
+    position: relative;
+    background: url(../img/login/bg2.png) no-repeat center center; }
+    #main .main_r .count {
+      background: #fff;
+      width: 400px;
+      margin-top: 300px;
+      margin-left: 100px;
+      border-radius: 10px;
+      border: 1px solid #b3da29; }
+      #main .main_r .count .name {
+        height: 60px;
+        border-bottom: 1px solid #b3da29;
+        line-height: 60px; }
+        #main .main_r .count .name input {
+          font-size: 16px;
+          width: 250px;
+          background: none;
+          margin-left: 24px;
+          border: none; }
+        #main .main_r .count .name i {
+          font-size: 32px;
+          margin-left: 20px;
+          color: #999; }
+      #main .main_r .count .password {
+        height: 60px;
+        border-bottom: 1px solid #b3da29;
+        line-height: 60px; }
+        #main .main_r .count .password input {
+          font-size: 16px;
+          width: 250px;
+          background: none;
+          margin-left: 22px;
+          border: none; }
+        #main .main_r .count .password i {
+          font-size: 36px;
+          margin-left: 20px;
+          color: #999; }
+      #main .main_r .count .code {
+        height: 60px;
+        line-height: 60px; }
+        #main .main_r .count .code input {
+          width: 120px;
+          font-size: 16px;
+          background: none;
+          border: none; }
+        #main .main_r .count .code i {
+          font-size: 20px;
+          color: #999;
+          margin-left: 20px; }
+        #main .main_r .count .code img {
+          margin-top: -5px; }
+        #main .main_r .count .code span {
+          font-size: 14px;
+          color: #666;
+          margin-left: 10px;
+          cursor: pointer; }
+        #main .main_r .count .code span:hover {
+          color: #BD2C00; }
+    #main .main_r .login {
+      width: 400px;
+      height: 50px;
+      border: 1px solid #fff;
+      background: #b3da29;
+      margin-left: 100px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 50px;
+      color: #FFF;
+      font-size: 20px;
+      margin-top: 50px;
+      cursor: pointer;
+      position: relative; }
+    #main .main_r #nts {
+      position: absolute;
+      top: 485px;
+      left: 170px;
+      color: #FF0000;
+      display: none; }
+    #main .main_r #pts {
+      position: absolute;
+      top: 485px;
+      left: 170px;
+      color: #FF0000;
+      display: none; }
+    #main .main_r #cts {
+      position: absolute;
+      top: 485px;
+      left: 170px;
+      color: #FF0000;
+      display: none; }
+
+/*# sourceMappingURL=login.css.map */

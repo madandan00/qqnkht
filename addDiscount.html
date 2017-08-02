@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/calendar.css" />
+		<link rel="stylesheet" href="css/addDiscount.css" />
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="xiangqing">
+				<div class="addhead">
+					<p>
+						<span>添加商品</span>
+					</p>
+					<p>
+						<button>返回</button>
+					</p>
+				</div>
+				<div class="base-info">
+					<div class="good-info">
+						<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优惠券名称</span><input type="text"/></p>
+						<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用分类</span>
+						<select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+						</p>
+						<p class="third"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优惠券类型</span>
+						<select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+						</p>
+						<p class="four"><span>满减金额（减去金额）</span><input type="text"></p>
+						<p class="five"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;消费金额</span><input type="text"></p>
+						<p class="six"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;领取限制</span>
+						<select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+						</p>
+						<p class="seven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发放总款</span><input type="text"></p>
+						<p class="eight"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;领取类型</span>
+						<select>
+							<option>有机蔬菜</option>
+							<option>生鲜水果</option>
+							<option>粮油副食</option>
+							<option>肉类禽蛋</option>
+						</select>
+						</p>
+						<p class="nine"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有效期</span><input type="text" id="Date1"><i class="iconfont icon-datefrom"></i><input type="text" id="Date2"><i class="iconfont icon-datefrom"></i></p>
+						<div class="mul-pic">
+							<span class="first">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品图片</span>
+							<div class="pic-box">
+								<div class="Preview" >
+			    					<img src="img/xiangqing/05-后台商品管理-商品管理-商品列表--商品详情_04_03.jpg">
+			    				</div>
+								<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath1" onchange="prePic('picPath1')" /></a>
+		    				</div>
+						</div>
+					</div>	
+				</div>
+				
+				<div class="xq-operation">
+					<input type="submit" value="确定"></input><input type="reset" value="取消"></input>
+				</div>
+				<!--表的信息-->
+				
+				<div class="good-list-info">
+					<!--表头-->
+					<div id="good-menu">
+						<ul>
+							<li class="nav1 nav">优惠券名称</li>
+							<li class="nav2 nav">优惠券图片</li>
+							<li class="nav3 nav">使用分类</li>
+							<li class="nav4 nav">优惠券类型</li>
+							<li class="nav5 nav">满减全额</li>
+							<li class="nav6 nav">消费金额</li>
+							
+							<li class="nav10 nav">有效期</li>
+
+							<li class="nav12 nav">审核</li>
+						</ul>
+					</div>
+					<!--表的内容-->
+					<div id="item">
+						<ul>
+							<li class="nav1 nav">满298减20</li>
+							<li class="nav2 nav">
+								<img src="img/login/bg01.png">	
+							</li>
+							<li class="nav3 nav">
+								特惠
+							</li>
+							<li class="nav4 price nav" >满减优惠</li>
+							<li class="nav5 discount nav">￥<span>20</span></li>
+							<li class="nav6 nav">￥<span>20</span></li>
+							
+							<li class="nav10 nav">05.06-06.06</li>
+
+							<li class="nav12 nav">通过</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="js/xiangqing.js" ></script>
+		<script type="text/javascript" src="js/date.js" ></script>
+		<script>
+		$("input:radio[name='zdsj']").on("click",function(){
+			if($("input:radio[name='zdsj']:checked").val()=="否"){
+				$("#Date1").css("display","none");
+				$("#Date2").css("display","none");
+				$(".icon-datefrom").css("display","none");
+			}else{
+				$("#Date1").css("display","block");
+				$("#Date2").css("display","block");
+				$(".icon-datefrom").css("display","block");
+			}
+		})	
+		</script>
+	</body>
+</html>

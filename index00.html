@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青青农客后台</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	</head>
+	<body style="height: 100%;">
+		<!--top头部-->
+		<div id="mark" style="width: 100%;height: 100%;background: rgba(0,0,0,0.3);position: fixed;right: 0;top:0;display: none;">
+			
+		</div>
+		<div id="top">
+			<div class="top">
+				<ul>
+					<li><i class="ico iconfont icon-guanliyuan"></i>超级管理员</li>
+					<li><i class="ico iconfont icon-shezhi1"></i>设置</li>
+					<a href="{:U('Login/gout')}"  onClick="return confirm('确定退出?');"><li><i class="ico iconfont icon-tuichu"></i>退出</li></a>
+				</ul>
+			</div>
+		</div>		
+		<!--main-->
+		<div id="main">
+			<!--侧边导航-->
+			<div id="nav">
+				<ul class="nav">
+					<li class="nav_m"><em><i class="ico1 iconfont icon-goods_manage"></i>商品管理<span class="ico2 iconfont icon-arrowright"></span></em>
+						<ul class="znav">
+							<li class="active goodslist zLi"><strong onclick="a(1)" >商品列表</strong></li>
+							<li class="lb2 zLi"><strong onclick="a(2)" >添加商品</strong></li>
+							<li class="lb2 zLi"><strong onclick="a(2)" >添加商品</strong></li>
+							<li class="lb2 zLi"><strong onclick="a(2)" >添加商品</strong></li>
+							<li ><b class="goodClass"><i>商品分类</i><span class="ico iconfont icon-arrowright"></span></b>
+                                 <ul id="goodClass2">
+                                 	<li><strong onclick="a(3)" >有机蔬菜</strong></li>
+                                 	<li><strong onclick="a(4)" >生鲜水果</strong></li>
+                                 	<li><strong onclick="a(5)" >粮油副食</strong></li>
+                                 	<li><strong onclick="a(6)" >肉类禽蛋</strong></li>
+                                 </ul>
+							</li>
+							<li class="zLi"><strong onclick="a(7)" >商品评论</strong></li>
+							<li><b class="action" onclick="a(19)"><i>活动商品</i><span class="ico iconfont icon-arrowright"></span></b>
+                                 <ul id="actions">
+                                 	<li><strong onclick="a(8)" href="">上新品</strong></li>
+                                 	<li><strong onclick="a(9)" href="">限时购</strong></li>
+                                 </ul>
+							</li>
+						</ul>
+					
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-dingdanguanli" ></i>订单管理<span class=" ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="orderlist zLi"><strong onclick="a(10)" >订单列表</strong></li>
+							<li class="orderlist zLi"><strong onclick="a(11)" >订单查询</strong></li>
+							<li class="orderlist zLi"><strong onclick="a(12)" >发货列表</strong></li>
+							<li class="orderlist zLi"><strong onclick="a(13)" >退换货列表</strong></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-caidan"></i>系统管理<span class="ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="zLi"><strong onclick="a(14)" >管理员列表</strong></li>
+							 <li class="zLi"><strong onclick="a(15)" >广告图片管理</strong></li>
+							<!-- <li ><a class="adPic" href="javascript:;" >广告图片管理</a>
+							   <ul id="lbt">
+							   	 <li>轮播图</li>
+							   	 <li>广告图</li>
+							   </ul>
+							</li> -->
+							 <li class="zLi"><strong onclick="a(16)" href="">轮播图</strong></li>
+							<li class="zLi"><strong onclick="a(17)" href="">权限管理</strong></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-fangbianlogin1"></i>用户管理<span class="ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="zLi"><strong onclick="a(18)" href="">会员管理</strong></li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--右侧内容-->
+			<div id="mainr">
+				
+				<iframe id='iframeId' style="position: relative;" name="ContentIframe" runat="server" src="{:U('Index/main')}" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="auto" allowtransparency="yes" ></iframe>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+//window.frames["iframeId"].document.getElementById("infoDisplay");
+//$("#infoDisplay",document.frame('ContentIframe').document).css("z-index","10000")
+//  var objContent = window.parent.frames['ContentIframe'];
+//  function a(val){
+//  	 switch (val) {
+//          default:
+//          case 1:
+//              objContent.location.href = "{:U('Goods/goodList')}";
+//              break;
+//          case 2:
+//              objContent.location.href = "{:U('Goods/addGood')}";
+//              break;
+//          case 3:  
+//              objContent.location.href = "{:U('Goods/goodClass')}?id=1";
+//              break;
+//          case 4:  
+//	            objContent.location.href = "{:U('Goods/goodClass')}?id=2";
+//	            break;
+//          case 5:  
+//	            objContent.location.href = "{:U('Goods/goodClass')}?id=3";
+//	            break;
+//          case 6:  
+//	            objContent.location.href = "{:U('Goods/goodClass')}?id=4";
+//	            break;
+//          case 7:  
+//	            objContent.location.href = "{:U('Goods/reviews')}";
+//	            break;
+//          case 8:  
+//	            objContent.location.href = "{:U('Goods/newGoods')}";
+//	            break;
+//          case 9:
+//              objContent.location.href = "{:U('Goods/limited')}";
+//              break;
+//          case 10:             
+//              objContent.location.href = "{:U('Order/orderlist')}"
+//              break;
+//          case 11:               
+//              objContent.location.href = "{:U('Order/orderInquiry')}";
+//              break;
+//          case 12:               
+//              objContent.location.href = "{:U('Order/orderDeliver')}";
+//              break;
+//          case 13:               
+//              objContent.location.href = "{:U('Order/exchange')}";
+//              break;
+//          case 14:               
+//              objContent.location.href = "{:U('Manager/index')}";
+//              break;
+//          case 15:               
+//          objContent.location.href = "{:U('Img/img')}";
+//          	break;
+//          case 16:               
+//          objContent.location.href = "{:U('Lunbo/index')}";
+//          	break;
+//          case 17:               
+//          objContent.location.href = "{:U('Auth/index')}";
+//          	break;
+//          case 18:               
+//          objContent.location.href = "{:U('Member/userManage')}";
+//                break;
+//          case 19:               
+//          objContent.location.href = "{:U('Goods/action')}" 
+//              
+//
+//      }	 
+//  }
+
+//  $(".goodClass").on("click",function(){
+//  	
+//  	$("#goodClass2").toggle(300);
+//  	//$(".goodClass2").css("display","block")
+//  })
+//  $(".action").on("click",function(){
+//  	
+//  	$("#actions").toggle(300);
+//  	//$(".goodClass2").css("display","block")
+//  })
+//  $(".adPic").on("click",function(){
+//  	$("#lbt").toggle(300);
+//  	//$(".goodClass2").css("display","block")
+//  })
+
+</script>

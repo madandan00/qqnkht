@@ -1,0 +1,65 @@
+.addhead {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .addhead p:first-child {
+    float: left; }
+    .addhead p:first-child span {
+      color: #666; }
+    .addhead p:first-child .four {
+      color: #b3da29; }
+  .addhead p:last-child {
+    float: right; }
+    .addhead p:last-child button {
+      width: 60px;
+      height: 20px;
+      background: #eeeeee;
+      font-size: 12px;
+      line-height: 20px;
+      outline: none;
+      border-radius: 5px; }
+
+.good-list-info {
+  width: 100%; }
+  .good-list-info #item ul {
+    width: 100%;
+    height: 50px; }
+    .good-list-info #item ul li {
+      float: left;
+      text-align: center;
+      height: 50px;
+      background: #f9fbf3;
+      line-height: 50px;
+      font-size: 12px; }
+  .good-list-info .nav1 {
+    width: 190px; }
+  .good-list-info .nav2 {
+    width: 50px; }
+    .good-list-info .nav2 img {
+      width: 50px;
+      height: 50px; }
+  .good-list-info .nav3 {
+    width: 100px; }
+  .good-list-info .nav4 {
+    width: 40px; }
+  .good-list-info .nav5 {
+    width: 60px; }
+  .good-list-info .nav6 {
+    width: 70px; }
+  .good-list-info .nav7 {
+    width: 100px; }
+  .good-list-info .nav8 {
+    width: 70px; }
+  .good-list-info .nav9 {
+    width: 115px; }
+  .good-list-info .nav10 {
+    width: 70px; }
+  .good-list-info .nav11 {
+    width: 70px; }
+  .good-list-info .nav12 {
+    width: 70px; }
+  .good-list-info .nav14 {
+    width: 80px; }
+
+/*# sourceMappingURL=addNewGood.css.map */

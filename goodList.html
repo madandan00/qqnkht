@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/goodList.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/list.css" />-->
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/goodList.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/list.css" />
+
+		<style>
+        .calendar{font-family:Tahoma; background:#fff; float:left; border-style:solid; border-width:1px; border-color:#85BEE5 #3485C0 #3485C0 #85BEE5; position:relative; padding:10px;left:-12px;top:5px; }
+        .calendar dl,.calendar dd{margin:0; padding:0; width:183px; font-size:12px; line-height:22px;}
+        .calendar dt.title-date{ display:block; border-bottom:1px solid #E4E4E4; font-weight:700; position:relative; margin-bottom:5px; padding-bottom:3px;}
+        .calendar dt{ float:left; width:25px; margin-left:1px; text-align:center;}
+        .calendar dt.title-date{ width:100%;}
+        .calendar dd{clear: both;width: 183px;height: 139px;font-weight: 700;background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_bg.png) no-repeat; margin:0;}
+        .prevyear,.nextyear, .prevmonth,.nextmonth{cursor:pointer;height:9px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat; overflow:hidden;position:absolute; top:8px; text-indent:-999px;}
+        .prevyear{  left:4px;  width:9px;}
+        .prevmonth{ width:5px; background-position:-9px 0; left:20px;}
+        .nextyear{  width:9px; background-position:-19px 0; right:5px;}
+        .nextmonth{ width:5px; background-position:-14px 0; right:20px;}
+        .calendar dd a{float: left;width: 25px;height: 22px; color:blue; overflow: hidden; text-decoration: none;
+            margin: 1px 0 0 1px; text-align:center;}
+        .calendar dd a.disabled{color:#999;}
+        .calendar dd a.tody{ color:red; }
+        .calendar dd a.on{background:blue; color:#fff;}
+        .calendar dd a.live{cursor:pointer}
+        .input{ border:1px solid #ccc; padding:4px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat right -18px;}
+        </style>
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="goodList">
+				<!--头部-->
+				<div class="good-list-top">
+					<div class="goodClass">
+						<form method="post" action="{:U('Goods/goodList')}" >
+						<div >
+							<span>商品类型</span>
+							<select name='goods_parents' id="first-class">
+								<foreach name="goodstype" item="g">
+									<option value="{$g.type_id}">{$g.type_name}</option>
+								</foreach>
+							</select>
+						</div>
+						<div >
+							<span>二级分类</span>
+							<select name ='goods_father' id = 'aa'>																
+								
+							</select>
+							
+						</div>
+						
+						<div>
+						
+							<span>商品名称</span>
+							<input type="text" name="goods_name" value="" />
+						
+						
+						</div>
+						<div>
+							<span>商品货号</span>
+							<input type="text" name='goods_odd' value=''>
+							
+						</div>
+						<button>查询</button>
+					</form>
+
+					</div>
+					<div class="good-operation">
+						<div>
+							<i class="iconfont icon-zhiding"></i>
+							<span>置顶</span>
+						</div>
+						<div>
+							<i class="iconfont icon-daochu1"></i>
+							<span>导出</span>
+						</div>
+						<div class="zidingyi">
+							<i class="iconfont icon-zidingyi"></i>
+							<span >自定义</span>
+						</div>
+					</div>
+				</div>
+				<!--列表-->
+				<!--表头-->
+				<div id="good-menu">
+					<ul>
+						<li class="nav1 ">序号</li>
+						<li class="nav2 nav">商品名称</li>
+						<li class="nav3 nav">商品图片</li>
+						<li class="nav4 nav">商品货号</li>
+						<li class="nav5 nav">单价</li>
+						<li class="nav6 nav">折扣</li>
+						<li class="nav7 nav">商品状态</li>
+						<li class="nav8 nav">库存</li>
+						<li class="nav9 nav">上架时间</li>
+						<li class="nav10 nav">商品分类1级</li>
+						<li class="nav11 nav">商品分类2级</li>
+						<li class="nav12 nav">促销</li>
+						<li class="nav13 nav">热销</li>
+						<li class="nav14 nav">销量</li>
+						<li class="nav15 ">操作</li>
+					</ul>
+				</div>
+				<!--表的内容-->
+				<div id="itemContainer">
+					<foreach name="goods" item="v">
+					<ul>
+						<li class="nav1 ">{$v.goods_id}</li>
+						<li class="nav2 nav">{$v.goods_name}</li>
+						<li class="nav3 nav">
+							<img src="__ROOT__{$v.goods_photo0}">	
+						</li>
+						<li class="nav4 nav">
+							{$v.goods_odd}
+						</li>
+						<li class="nav5 price nav" >{$v.goods_price}</li>
+						<li class="nav6 discount nav">{$v.goods_discount}</li>
+						<li class="nav7 nav">{$v['goods_state']?'上架':'下架'}</li>
+						<li class="nav8 has nav">{$v.goods_number}</li>
+						<li class="nav9 time nav">{$v.goods_time}</li>
+						<li class="nav10 nav">{$v.goods_parentsname}</li>
+						<li class="nav11 nav">{$v.goods_fathername}</li>
+						<li class="nav12 nav">
+							<i>{$v['goods_promote']?'是':'否'}</i>
+						</li>
+						<li class="nav13 nav">
+							<i>{$v['goods_hot']?'是':'否'}</i>
+						</li>
+						<li class="nav14 sell nav">{$v.goods_saleno}</li>
+						<li class="nav15 ">
+							<a href="{:U('Goods/xiangqing')}?id={$v.goods_id}"><i class="iconfont icon-xiangqing1"></i></a>
+							<i class="iconfont icon-xiugaimima change"></i>
+							<a href="#" onClick="aa(this)" value="{$v.goods_id}">√</a>
+							<a  value="{$v.goods_id}" href="" onClick="del(this)"><i class="iconfont icon-shanchu"></i></a>
+
+						</li>
+					</ul>
+				</foreach>
+					
+					
+				</div>
+				<div id="tap">				
+				    	<div class="zs">
+							<span id="page-panel"></span>
+							<span id="page-pane2"></span>
+							<span id="page-pane3"></span>
+							<span id="page-pane4"></span>
+						</div>
+						<div class="holder" ></div>	
+					</div>
+			</div>
+			<div class="jx">
+				<div class="jx-head">
+					<span>请选择</span>
+					<i class="iconfont icon-guanbianniu jsClose"></i>
+				</div>
+				<div class="jx-xx">
+					<p><b class="iconfont icon-4"></b><span>可多选，最多选择11项</span></p>
+					<div class="jx-dx">
+					<div><input type="checkbox"/><i>序号</i></div>
+					<div><input type="checkbox"/><i>商品名称</i></div>		
+					<div><input type="checkbox"/><i>商品图片</i></div>
+					
+					<!--<div><input type="checkbox"/><i>商品图片2</i></div>
+					<div><input type="checkbox"/><i>商品图片3</i></div>
+					<div><input type="checkbox"/><i>商品图片4</i></div>
+					<div><input type="checkbox"/><i>商品图片5</i></div>
+					<div><input type="checkbox"/><i>商品详情图片1</i></div>
+					<div><input type="checkbox"/><i>商品详情图片2</i></div>
+					<div><input type="checkbox"/><i>商品详情图片3</i></div>-->
+					
+					<div><input type="checkbox"/><i>商品货号</i></div>
+					<div><input type="checkbox"/><i>单价</i></div>
+					<div><input type="checkbox" /><i>折扣</i></div>
+					<div><input type="checkbox"/><i>商品状态</i></div>
+					<div><input type="checkbox"/><i>库存</i></div>
+					<div><input type="checkbox"/><i>上架时间</i></div>
+					<div><input type="checkbox"/><i>1级商品</i></div>
+					<div><input type="checkbox"/><i>2级商品</i></div>
+					<div><input type="checkbox"/><i>促销</i></div>
+					<div><input type="checkbox"/><i>热销</i></div>
+					<div><input type="checkbox"/><i>销量</i></div>
+					</div>
+					<!--<div class="mask"></div>-->
+				</div>
+				
+				<div class="jx-jg">
+					<!--<input type="checkbox"/>		-->	
+					<p><span>已选择选项</span><span class="qingkong">清空已选项</span></p>
+					<div class="check">
+						
+					</div>
+				</div>
+				<div class="qrxz">
+					<button class="yes">确定</button><button class="no">取消</button>
+				</div>
+			</div>
+		</div>
+		
+		<script src="__PUBLIC__js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__js/jPages.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="__PUBLIC__js/goodList.js" ></script>
+        <script src="__PUBLIC__js/date.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        function aa (data) {
+		//console.log(data);
+		var ul=data.parentNode.parentNode
+		//console.log(ul)
+		var nav5 = $(ul).find(".nav5").html();
+		var nav6 = $(ul).find(".nav6").html();
+		var nav9 = $(ul).find(".nav9").html();
+		var nav8 = $(ul).find(".nav8").html();
+		var nav14 = $(ul).find(".nav14").html();
+		var id =$(data).attr("value");
+			// console.log(nav5,nav6,nav9,nav8,nav14,id)
+		
+		$.post("{:U('Goods/saveGoods')}","goods_price="+nav5+"&goods_discount="+nav6+
+			"&goods_number="+nav8+"&goods_time="+nav9+"&goods_saleno="+nav14+"&goods_id="+id,
+			function(data){
+				// console.log(data)
+				if (data==1) {
+					window.location.reload();
+					alert('添加成功')
+				}else{
+					window.location.reload();
+					alert('添加失败')
+				}
+               },"json")
+		
+	}
+	function del(data){
+		var id =$(data).attr("value");
+		//console.log(id);
+		$.post("{:U('Goods/delGoods')}","goods_id="+id,
+			function(data){
+				if (data==1) {
+					window.location.reload();
+					alert('删除成功')
+				}else{
+					window.location.reload();
+					alert('删除失败')
+				}
+               },"json")
+	}
+
+	setTimeout(function(){
+		$("#first-class").change()
+	},50)
+
+$("#first-class").change(function(){
+	$("#aa").html("")
+	var id = $("#first-class").find("option:selected").val()
+	$.ajax({
+	type:"get",
+	url:"{:U('Goods/father')}",
+	data:{parent_id:id},
+	dataType:"json",
+	success:function(data){
+		var data = eval(data)
+		var len = data.length
+		for(var i=0;i<len;i++){
+			//console.log(data[i].type_name)
+			var html = '<option value="'+data[i].type_id+'">'+data[i].type_name+'</option>'
+			$("#aa").append(html)
+		}
+
+	}
+});
+
+})
+
+        </script>
+		
+	</body>
+</html>

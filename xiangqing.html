@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/xiangqing.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/add.css" />
+		<style>
+        .calendar{font-family:Tahoma; background:#fff; float:left; border-style:solid; border-width:1px; border-color:#85BEE5 #3485C0 #3485C0 #85BEE5; position:relative; padding:10px;left:-12px;top:5px; }
+        .calendar dl,.calendar dd{margin:0; padding:0; width:183px; font-size:12px; line-height:22px;}
+        .calendar dt.title-date{ display:block; border-bottom:1px solid #E4E4E4; font-weight:700; position:relative; margin-bottom:5px; padding-bottom:3px;}
+        .calendar dt{ float:left; width:25px; margin-left:1px; text-align:center;}
+        .calendar dt.title-date{ width:100%;}
+        .calendar dd{clear: both;width: 183px;height: 139px;font-weight: 700;background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_bg.png) no-repeat; margin:0;}
+        .prevyear,.nextyear, .prevmonth,.nextmonth{cursor:pointer;height:9px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat; overflow:hidden;position:absolute; top:8px; text-indent:-999px;}
+        .prevyear{  left:4px;  width:9px;}
+        .prevmonth{ width:5px; background-position:-9px 0; left:20px;}
+        .nextyear{  width:9px; background-position:-19px 0; right:5px;}
+        .nextmonth{ width:5px; background-position:-14px 0; right:20px;}
+        .calendar dd a{float: left;width: 25px;height: 22px; color:blue; overflow: hidden; text-decoration: none;
+            margin: 1px 0 0 1px; text-align:center;}
+        .calendar dd a.disabled{color:#999;}
+        .calendar dd a.tody{ color:red; }
+        .calendar dd a.on{background:blue; color:#fff;}
+        .calendar dd a.live{cursor:pointer}
+        .input{ border:1px solid #ccc; padding:4px; background:url(http://images.cnblogs.com/cnblogs_com/NNUF/379856/o_nextprv.png) no-repeat right -18px;}
+    	</style>
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="xiangqing">
+				<div class="addhead">
+					<p>
+						<span>商品管理</span>&gt;<span>商品列表</span>&gt;<span>商品详情</span>
+					</p>
+					<p>
+						<a href="{:U('Goods/goodList')}"><button>返回</button></a>
+					</p>
+				</div>
+				<form action="{:U('Goods/updateGood')}" method='post' enctype ="multipart/form-data">
+	<input type="hidden" name='id' value='{$goods[0].goods_id}'>
+	<input type="hidden" name='photo0' value='{$goods[0].goods_photo0}'>
+	<input type="hidden" name='photo1' value='{$goods[0].goods_photo1}'>
+	<input type="hidden" name='photo2' value='{$goods[0].goods_photo2}'>
+	<input type="hidden" name='photo3' value='{$goods[0].goods_photo3}'>
+	<input type="hidden" name='photo4' value='{$goods[0].goods_photo4}'>
+	<input type="hidden" name='photo5' value='{$goods[0].goods_photo5}'>
+	<input type="hidden" name='caption' value='{$goods[0].goods_caption}'>
+	<input type="hidden" name='caption1' value='{$goods[0].goods_caption1}'>
+	<input type="hidden" name='caption2' value='{$goods[0].goods_caption2}'>
+				<div class="base-info">
+					<div class="head"><span>基本信息</span></div>
+					<div class="good-info">
+						<p class="first"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品名称</span><input type="text" name='goods_name' value="{$goods[0].goods_name}"/></p>
+						<p class="second"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品分类</span>
+						<select name="goods_parents" id = "first-class">
+							<foreach name='goodstype' item='g'>
+								<option value="{$g.type_id}" name="{$goods[0].goods_father}" id="{$goods[0].goods_parents}">{$g.type_name}</option>
+							</foreach>
+						</select>
+					    <select name='goods_father' id="aa">
+							
+						</select>
+						</p>
+						<p class="third"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品货号</span><input type="text" name='goods_odd' value='{$goods[0].goods_odd}'></p>
+						<p class="four"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品价格</span><input type="text" name='goods_price' value='{$goods[0].goods_price}' id='goodsmoney'></p>
+						<p class="five"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规格</span><input type="text" name="goods_spec" value='{$goods[0].goods_spec}' ></p>
+						<p class="six"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有规格</span><input type="text" name='goods_specs' value='{$goods[0].goods_specs}' ></p>
+						<p class="seven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规格标识</span><input type="text" name='goods_stype' value='{$goods[0].goods_stype}'></p>
+						<p class="eight"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态</span><input type="text" name='goods_status' value='{$goods[0].goods_status}'></p>
+						<p class="nine"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成本价</span><input type="text" name='goods_cost' value='{$goods[0].goods_cost}'></p>
+						<p class="ten"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;库存</span><input type="text" name='goods_number' value='{$goods[0].goods_number}'></p>
+						<p class="eleven"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;折扣</span><input type="text" name='goods_discount' value='{$goods[0].goods_discount}' id='discount'></p>
+						<p class="twelve"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;促销价格</span><input type="text" name='goods_formerprice' value='{$goods[0].goods_formerprice}' id='salesmoney'></p>
+						<p class="thirteen"><span>是否上架销售</span><b><input type="radio" id='stateyes' name="sj" value='1'><i>是</i></b><b><input type="radio" name="sj" value='0' id='stateno'><i>否</i></b></p>
+						<p class="thirteen" ><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品属性<b></span><input type="checkbox" name="rx" value='1' id='hot'><i>热销</i></b><b><input type="checkbox" name="cx" value='1' id='promote'><i>促销</i></b><b><input type="checkbox" name="tj" value='1' id='recommend'><i>推荐</i></b></p>
+						<p id="action" class="sixteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;活动</span><input type="radio" name="goods_activity" class="newpro" value='1' id='newgoods'/><span>上新品</span><input class="tbuy" type="radio" name="goods_activity" value="2" id='timesale'><span>限时购</span></p>
+						<p class="timer" style = "display:none" ><span>&nbsp;&nbsp;&nbsp;&nbsp;限时购时间段</span> 第<select>
+							<option value="0">8:00-9:00</option>
+							<option value="1">10:00-11:00</option>
+							<option value="2">12:00-13:00</option>
+							<option value="3">14:00-15:00</option>
+							<option value="4">16:00-17:00</option>
+						</select>阶段  
+						</p>
+						<p class="seventeen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标语</span><input type='radio' name='by' value='1' id='y'><i>是</i></b><b><input type="radio" name="by" value='0' id='n'><i>否</i><textarea id='b'>{$goods[0].goods_slogan}</textarea></p>
+						<p class="eighteen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量</span><input type="text" name='goods_saleno' value="{$goods[0].goods_saleno}"></p>
+						
+					</div>	
+				</div>
+				<div class="pic">
+					<div class="head"><span>图片与描述</span></div>
+					<div class="mul-pic">
+						<span>商品图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo0}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath1" onchange="prePic('picPath1')" name='goods_photo0'/></a>
+	    				</div>
+					</div>
+					<div class="mul-pic">
+						<span>详情图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo1}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath21" onchange="prePic('picPath21')" name='goods_photo1'/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo2}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath22" onchange="prePic('picPath22')"  name='goods_photo2'/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo3}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath23" onchange="prePic('picPath23')" name='goods_photo3'/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo4}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath24" onchange="prePic('picPath24')" name='goods_photo4'/></a>
+						</div>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_photo5}"/>
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath25" onchange="prePic('picPath25')" name='goods_photo5'/></a>
+						</div>
+	    			</div>
+
+					<div class="mul-pic">
+						<span>商品描述</span>
+						<textarea name="goods_introduce">{$goods[0].goods_introduce}</textarea>
+					</div>
+					<div class="mul-pic">
+						<span>描述图片</span>
+						<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_caption}"/>
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath31" onchange="prePic('picPath31')" name='goods_caption'/></a>
+	    				</div>
+	    				<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_caption1}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath32" onchange="prePic('picPath32')" name='goods_caption1'/></a>
+	    				</div>
+	    				<div class="pic-box">
+							<div class="Preview" >
+		    					<img src="__ROOT__{$goods[0].goods_caption2}">
+		    				</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath33" onchange="prePic('picPath33')" name='goods_caption2'/></a>
+	    				</div>
+	    				
+					</div>
+				</div>
+				<div class="xq-operation">
+					<input id="abc" type='submit' name='sub' value='确定'>
+					<input type='reset' name='res' value='取消'>
+				</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/xiangqing.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/date.js" ></script>
+		<script type="text/javascript">
+		
+
+	setTimeout(function(){
+		$("#first-class").change()
+	},50)
+var index = $("#first-class option").attr("id")
+var index2 = $("#first-class option").attr("name")
+
+$("#first-class option").eq(index-1).prop("selected", 'selected');
+$("#first-class").change(function(){
+	$("#aa").html("")
+	var id = $("#first-class").find("option:selected").val()
+	$.ajax({
+	type:"get",
+	url:"{:U('Goods/father')}",
+	data:{parent_id:id},
+	dataType:"json",
+	success:function(data){
+		var data = eval(data)
+		var len = data.length
+		// console.log(data)
+		for(var i=0;i<len;i++){
+			//console.log(data[i].type_name)
+			var html = '<option value="'+data[i].type_id+'">'+data[i].type_name+'</option>'
+			$("#aa").append(html)
+			if(data[i].type_id== index2){
+				//console.log(i)
+
+            $("#aa option").eq(i).prop("selected", 'selected');
+			}
+			
+		}
+		
+
+		//console.log(data)
+		
+	}
+});
+
+})
+			var money=$("#goodsmoney").val();
+			var discount=$("#discount").val();
+			var salesmoney=(money*discount).toFixed(2);
+			$("#salesmoney").val(salesmoney)
+			$("#goodsmoney").blur(function(){
+				var money=$("#goodsmoney").val();
+				var discount=$("#discount").val();
+				//console.log(money,discount)
+				var salesmoney=(money*discount).toFixed(2);
+				$("#salesmoney").val(salesmoney);
+			})
+			$("#discount").blur(function(){
+				var money=$("#goodsmoney").val();
+				var discount=$("#discount").val();
+				//console.log(money,discount)
+				var salesmoney=(money*discount).toFixed(2);
+				$("#salesmoney").val(salesmoney);
+			})
+			
+		
+		</script>
+					<script type="text/javascript">
+				
+					var state = {$goods[0].goods_putaway};
+						// console.log(state)
+						if (state==1) {
+							$("#stateyes").attr("checked","checked")
+						}else{
+							$("#stateno").attr("checked","checked")
+						};
+					var auto = {$goods[0].goods_auto};
+						// console.log(state)
+						if (auto==1) {
+							$("#autoyes").attr("checked","checked")
+						}else{
+							$("#autono").attr("checked","checked")
+						};
+						var hot = {$goods[0].goods_hot};
+						var promote = {$goods[0].goods_promote};
+						var recommend = {$goods[0].goods_recommend};
+						if (hot==1) {
+							$("#hot").attr("checked","checked")
+						} 
+						if (promote==1) {
+							$("#promote").attr("checked","checked")
+						};
+						if (recommend==1) {
+							$("#recommend").attr("checked","checked")
+						};
+						$("#goback").click(function(){
+							window.history.go(-1);
+						})
+						</script>
+	</body>
+</html>
+<script type="text/javascript">
+$("#abc").click(function(){
+	var imgs = $(".pic-box .Preview img")
+	var arr = []
+	for(var i=0;i<imgs.length;i++){
+		var src = imgs[i].src
+		arr.push(src)
+	}
+	$.ajax({
+				type:"get",
+			   	url:"{:U('Goods/updateGood')}",			   	
+			   	data:{arr:arr},
+			   	dataType:"json",
+			   	traditional: true, 
+			   	success:function(data){
+			   		//console.log(data)
+			 //   		if (data==1) {
+				// 	window.location.reload();
+				// 	alert('修改成功')
+				// }else{
+				// 	window.location.reload();
+				// 	alert('修改失败')
+				// }
+				
+				
+			   	}
+		   })
+
+})
+	
+
+
+
+
+	
+	</script>
+		<script>
+		if($("input:radio[name='zdsj']:checked").val()==0){
+				$("#Date1").css("display","none");
+				$("#Date2").css("display","none");
+				$("#Date1").removeAttr("name");
+				$("#Date2").removeAttr("name");
+				$(".icon-datefrom").css("display","none");
+			}else{
+				$("#Date1").css("display","block");
+				$("#Date1").attr("name","goods_time");
+				$("#Date2").css("display","block");
+				$("#Date2").attr("name","goods_end");
+				$(".icon-datefrom").css("display","block");
+			}
+		$("input:radio[name='zdsj']").on("click",function(){
+			if($("input:radio[name='zdsj']:checked").val()=="0"){
+				$("#Date1").css("display","none");
+				$("#Date2").css("display","none");
+				$("#Date1").removeAttr("name");
+				$("#Date2").removeAttr("name");
+				$(".icon-datefrom").css("display","none");
+			}else{
+				$("#Date1").css("display","block");
+				$("#Date1").attr("name","goods_time");
+				$("#Date2").css("display","block");
+				$("#Date2").attr("name","goods_end");
+				$(".icon-datefrom").css("display","block");
+			}
+		})	
+		</script>
+			<script>
+			setTimeout(function(){
+				//console.log($("#y").is(":checked"))
+				if($("#y").is(":checked")==true){
+					$("#b").css("display","block");
+				    $("#b").attr("name","goods_slogan");
+				}else{
+					$("#b").css("display","none");
+				    $("#b").removeAttr("name",'goods_slogan');
+				}
+
+			},50)
+			
+			
+		//console.log($("input:radio[name='by']:checked").val())
+		$("input:radio[name='by']").on("click",function(){
+			if($("input:radio[name='by']:checked").val()=="0"){
+				$("#b").css("display","none");
+				$("#b").removeAttr("name",'goods_slogan');
+	
+			}else{
+				$("#b").css("display","block");
+				$("#b").attr("name","goods_slogan");
+				
+			}
+		})	
+		</script>
+		<script type="text/javascript">
+						var activity = {$goods[0].goods_activity};
+						// console.log(state)
+						if (activity==1) {
+							$("#newgoods").attr("checked","checked")
+						}else if(activity==2){
+							$("#timesale").attr("checked","checked")
+						};
+						var by = {$goods[0]['goods_slogan']?1:0};
+						// console.log(state)
+						if (by==0) {
+							$("#n").attr("checked","checked")
+						}else{
+							$("#y").attr("checked","checked")
+						};
+		</script>
+		<script type="text/javascript">
+			// 上新品 限时购点击事件
+			$(".tbuy").on("click",function(){
+			    $(".timer").show()
+			    $(".timer select").attr("name","ac_type")
+			})
+			$(".newpro").on("click",function(){
+			    $(".timer").hide()
+			    $(".timer select").attr("name","")
+			})
+		</script>

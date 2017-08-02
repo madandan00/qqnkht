@@ -1,0 +1,250 @@
+.right-content {
+    background: #fefefe;
+    height: 500px;
+}
+#goodClass {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    .head {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        .first {
+            float: left;
+            .third {
+                color: #b3da29;
+            }
+        }
+    }
+    .content {
+        margin-top: 90px;
+        p {
+            margin-top: 20px;
+            overflow: hidden;
+            height: 40px;
+            input {
+                width: 160px;
+                padding: 0 5px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #ccc;
+                float: left;
+                font-size: 12px;
+              
+            }
+            span {
+                float: left;
+                height: 30px;
+                line-height: 30px;
+            }
+            select {
+                float: left;
+                font-size: 12px;
+                
+                width: 160px;
+                border: 1px solid #ccc;
+                height: 30px;
+                option{
+                    height: 30px;
+                }
+            }
+        }
+       
+        .first {
+            span {
+                margin-left: 150px;
+            }
+            .first {
+                margin-left: 20px;
+            }
+            .second {
+                background: #b3da29;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+        .second {
+            span {
+                margin-left: 150px;
+            }
+            .first {
+                margin-left: 30px;
+            }
+            .second {
+                background: #b3da29;
+                color: #fff;
+                font-size: 12px;
+            }
+            select {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+           
+        }
+         #addbtn{
+            display: inline-block;
+            text-align: center;
+            float: left;
+            width:80px;
+            height: 30px;
+            border: none;
+           font-size: 14px;
+             border-radius: 10%;
+            cursor: pointer;
+            margin-right: 20px;
+            box-shadow: 0 1px 1px #989996;
+            background: #b3da29;
+            color: #fff;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+        #add,
+        #change,
+        #del {
+            width: 80px;
+            border: none;
+            border-radius: 10%;
+            cursor: pointer;
+            margin-right: 20px;
+            box-shadow: 0 1px 1px #989996;
+            font-size: 14px;
+            
+        }
+        #change {
+            background: #b3da29;
+            color: #fff;
+        }
+        #del {
+            background: #e8e8e6;
+            color: #297e27;
+        }
+       
+    }
+}
+.addt {
+    width: 480px;
+    height: 300px;
+    padding-top: 50px;
+    position: fixed;
+    left: 220px;
+    top: 180px;
+    border: 1px solid #ccc;
+    background: #fff;
+    display: none;
+    z-index: 3;
+    i{
+        
+        position: absolute;
+        top:0;
+        right:10px;
+        font-size: 30px;
+        color: #b3da29;
+        cursor: pointer;
+    }
+    input {
+        width: 180px;
+        padding: 0 5px;
+        height: 30px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+       
+    }
+    span {
+        margin-right: 10px;
+        margin-left: 80px;
+        font-size: 14px;
+    }
+    .second {
+        background: #b3da29;
+        color: #fff;
+        font-size: 12px;
+    }
+    #add {
+        width: 80px;
+        border: none;
+        margin-left: 150px;
+        border-radius: 10%;
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 14px;
+        box-shadow: 0 1px 1px #989996;
+    }
+    #qx {
+        width: 80px;
+        border: none;
+        margin-left: 20px;
+        border-radius: 10%;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 20px;
+        box-shadow: 0 1px 1px #989996;
+        background: #e8e8e6;
+        color: #297e27;
+    }
+}
+.pic-box {
+    float: left;
+    .Preview {
+        border: 1px solid #ccc;
+        img{
+            border: none;
+        }
+    }
+    .pics {
+        font-weight: normal;
+        padding: 4px 15px;
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        cursor: pointer;
+        color: #333;
+        background: #e8e8e6;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        input {
+            margin-top: 0;
+            position: absolute;
+            background: #e8e8e6;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+           
+            filter:alpha(opacity=0);
+            cursor: pointer;
+        }
+    }
+}
+.Preview {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.mark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 100px;
+    color: #fff;
+}

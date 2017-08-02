@@ -1,0 +1,304 @@
+.addhead {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .addhead p:first-child {
+    float: left; }
+    .addhead p:first-child span {
+      color: #b3da29; }
+  .addhead p:last-child {
+    float: right; }
+    .addhead p:last-child button {
+      width: 50px;
+      height: 20px;
+      font-size: 14px;
+      line-height: 21px;
+      outline: none;
+      border-radius: 5px; }
+
+#goodList .good-list-top {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  #goodList .good-list-top .goodClass {
+    width: 850px;
+    height: 20px;
+    float: left; }
+    #goodList .good-list-top .goodClass div {
+      float: left;
+      width: 200px;
+      height: 21px; }
+      #goodList .good-list-top .goodClass div span {
+        float: left;
+        color: #747474;
+        margin-right: 10px; }
+      #goodList .good-list-top .goodClass div input {
+        float: left; }
+    #goodList .good-list-top .goodClass select {
+      font-size: 12px;
+      width: 120px;
+      height: 20px;
+      float: left;
+      border: 1px solid #999999;
+      border-radius: 5px;
+      padding: 0 0 0 30px;
+      line-height: 18px;
+      box-sizing: border-box; }
+    #goodList .good-list-top .goodClass input {
+      font-size: 12px;
+      height: 20px;
+      width: 120px;
+      padding: 0 5px;
+      float: left;
+      line-height: 20px;
+      border-radius: 5px;
+      border: 1px solid #999999; }
+    #goodList .good-list-top .goodClass button {
+      height: 19px;
+      float: left;
+      margin-left: 8px;
+      padding: 0 7px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 12px;
+      background: #b3da29;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 1px 1px #989996;
+      box-sizing: border-box; }
+  #goodList .good-list-top .good-operation {
+    float: right;
+    width: 210px;
+    height: 20px; }
+    #goodList .good-list-top .good-operation div {
+      float: left;
+      padding: 0 8px;
+      cursor: pointer; }
+    #goodList .good-list-top .good-operation div:first-child {
+      color: #f27507; }
+    #goodList .good-list-top .good-operation .second {
+      color: #f2d23b; }
+    #goodList .good-list-top .good-operation div:last-child {
+      color: #2a98e5; }
+#goodList .nav1,
+#goodList .nav2,
+#goodList .nav3,
+#goodList .nav4,
+#goodList .nav5,
+#goodList .nav6,
+#goodList .nav7,
+#goodList .nav8,
+#goodList .nav9,
+#goodList .nav10,
+#goodList .nav11,
+#goodList .nav12,
+#goodList .nav13,
+#goodList .nav14,
+#goodList .nav15 {
+  text-align: left;
+  padding-left: 15px;
+  box-sizing: border-box; }
+#goodList .nav1 {
+  width: 60px; }
+#goodList .nav2 {
+  width: 200px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  #goodList .nav2 a:hover {
+    color: #fcd8ae;
+    text-decoration: underline; }
+#goodList .nav3 {
+  width: 70px; }
+  #goodList .nav3 img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px; }
+#goodList .nav4 {
+  width: 100px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none; }
+#goodList .nav5 {
+  width: 60px; }
+  #goodList .nav5 input {
+    width: 50px; }
+#goodList .nav6 {
+  width: 60px; }
+  #goodList .nav6 input {
+    width: 50px; }
+#goodList .nav7 {
+  width: 70px;
+  display: none; }
+#goodList .nav8 {
+  width: 70px; }
+  #goodList .nav8 input {
+    width: 60px; }
+#goodList .nav9 {
+  width: 95px; }
+  #goodList .nav9 input {
+    width: 85px; }
+#goodList .nav10 {
+  width: 100px; }
+#goodList .nav11 {
+  width: 100px; }
+#goodList .nav12 {
+  width: 60px;
+  display: none; }
+#goodList .nav13 {
+  width: 60px;
+  display: none; }
+#goodList .nav14 {
+  width: 70px; }
+  #goodList .nav14 input {
+    width: 60px; }
+#goodList .nav15 {
+  width: 200px; }
+  #goodList .nav15 i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    line-height: 20px; }
+  #goodList .nav15 .cancel1,
+  #goodList .nav15 .change {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 40px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 1px #999;
+    cursor: pointer;
+    margin-top: 15px; }
+  #goodList .nav15 .change {
+    background: #b3da29;
+    color: #fff; }
+  #goodList .nav15 .cancel1 {
+    margin-left: 10px;
+    display: none;
+    background: #e8e8e6;
+    color: #087505; }
+  #goodList .nav15 .top,
+  #goodList .nav15 .shangjia,
+  #goodList .nav15 .xiajia, #goodList .nav15 .Cancel2 {
+    font-size: 14px;
+    padding-left: 10px;
+    cursor: pointer; }
+  #goodList .nav15 .top {
+    color: #8a8a8a;
+    font-weight: bold; }
+  #goodList .nav15 .shangjia img,
+  #goodList .nav15 .xiajia img {
+    width: 14px;
+    height: 14px; }
+  #goodList .nav15 .Cancel2 {
+    color: #f26645;
+    font-size: 20px; }
+
+.jx {
+  display: none;
+  width: 800px;
+  background: #fff;
+  position: fixed;
+  top: 130px;
+  left: 200px;
+  border: 1px solid #abacb6;
+  border-radius: 10px;
+  overflow: hidden; }
+  .jx .jx-head {
+    width: 100%;
+    height: 40px;
+    background: #e2f2c6;
+    cursor: move; }
+    .jx .jx-head span {
+      margin-left: 15px;
+      color: #404040;
+      line-height: 40px; }
+    .jx .jx-head i {
+      float: right;
+      margin-right: 10px;
+      color: #fff;
+      line-height: 40px;
+      font-size: 20px;
+      cursor: pointer; }
+  .jx .jx-xx {
+    overflow: hidden;
+    position: relative; }
+    .jx .jx-xx b {
+      font-size: 24px;
+      color: #f58b19;
+      padding: 0 10px;
+      line-height: 45px; }
+    .jx .jx-xx span {
+      font-size: 12px;
+      color: #f58b19;
+      line-height: 45px; }
+    .jx .jx-xx .jx-dx {
+      padding: 0 30px;
+      overflow: hidden; }
+      .jx .jx-xx .jx-dx div {
+        float: left;
+        width: 148px;
+        height: 30px; }
+        .jx .jx-xx .jx-dx div i {
+          margin-left: 10px;
+          margin-bottom: 10px; }
+        .jx .jx-xx .jx-dx div input {
+          margin-bottom: 10px; }
+  .jx .jx-jg {
+    display: none;
+    width: 740px;
+    margin: auto auto 20px;
+    padding: 10px;
+    border: 1px solid #f58b19;
+    border-radius: 5px;
+    overflow: hidden; }
+    .jx .jx-jg p span {
+      font-size: 12px; }
+    .jx .jx-jg p .first {
+      color: #e80d0d; }
+    .jx .jx-jg p .second {
+      color: #087505;
+      margin-left: 10px; }
+    .jx .jx-jg .check {
+      width: 100%;
+      overflow: hidden; }
+      .jx .jx-jg .check div {
+        float: left;
+        width: 148px;
+        height: 15px;
+        margin-top: 10px; }
+        .jx .jx-jg .check div input {
+          font-size: 12px;
+          line-height: 15px;
+          float: left; }
+        .jx .jx-jg .check div i {
+          margin-left: 10px;
+          font-size: 12px;
+          line-height: 15px;
+          float: left; }
+  .jx .qrxz {
+    width: 180px;
+    height: 32px;
+    margin: 30px auto; }
+    .jx .qrxz button {
+      width: 80px;
+      border-radius: 10px;
+      outline: none; }
+    .jx .qrxz button:first-child {
+      background: #b3da29;
+      color: #fff; }
+    .jx .qrxz button:last-child {
+      background: #e8e8e6;
+      color: #087505;
+      margin-left: 20px; }
+
+/*# sourceMappingURL=goodList.css.map */

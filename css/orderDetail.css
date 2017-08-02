@@ -1,0 +1,70 @@
+.right-content {
+  background: #fefefe; }
+
+#orderDetail {
+  width: 100%; }
+  #orderDetail .xq-head {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; }
+    #orderDetail .xq-head .first {
+      float: left; }
+      #orderDetail .xq-head .first .third {
+        color: #b3da29; }
+    #orderDetail .xq-head .second {
+      float: right; }
+      #orderDetail .xq-head .second button {
+        width: 60px;
+        height: 20px;
+        background: #eeeeee;
+        font-size: 12px;
+        line-height: 20px;
+        outline: none;
+        border-radius: 5px; }
+  #orderDetail .orderDetailContent {
+    font-size: 12px;
+    background: #f9fbf3;
+    padding: 20px 0;
+    border: 1px solid #e6f5b1; }
+    #orderDetail .orderDetailContent p {
+      margin-left: 110px;
+      margin: 0 20px 0 110px;
+      height: 40px;
+      line-height: 40px; }
+      #orderDetail .orderDetailContent p i {
+        margin-left: 20px; }
+      #orderDetail .orderDetailContent p .iconfont {
+        margin-left: 50px;
+        cursor: pointer; }
+      #orderDetail .orderDetailContent p .icon-zidingyi {
+        color: #118edd; }
+      #orderDetail .orderDetailContent p .icon-queding {
+        color: green; }
+      #orderDetail .orderDetailContent p input {
+        height: 20px;
+        font-size: 12px; }
+    #orderDetail .orderDetailContent .nine input, #orderDetail .orderDetailContent .nine span, #orderDetail .orderDetailContent .nine i, #orderDetail .orderDetailContent .nine em {
+      float: left; }
+    #orderDetail .orderDetailContent .nine input {
+      margin-top: 12px;
+      margin-left: 30px;
+      margin-right: 6px; }
+    #orderDetail .orderDetailContent .nine #sends {
+      display: none; }
+    #orderDetail .orderDetailContent .ten input {
+      width: 30px; }
+    #orderDetail .orderDetailContent b {
+      margin-left: 50px; }
+    #orderDetail .orderDetailContent .eleven {
+      text-align: center; }
+      #orderDetail .orderDetailContent .eleven button {
+        width: 50px;
+        height: 20px;
+        background: #b3da29;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 20px; }
+
+/*# sourceMappingURL=orderDetail.css.map */

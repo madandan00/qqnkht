@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>管理员</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<!--<link rel="stylesheet" href="__PUBLIC__css/public.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/right-public.css" />
+		<link rel="stylesheet" href="__PUBLIC__font/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/list.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/fenye.css" />
+		<link rel="stylesheet" href="__PUBLIC__css/systemAdmin.css" />-->
+			<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/fenye.css" />
+		<link rel="stylesheet" href="css/systemAdmin.css" />
+	</head>
+	<body>
+		<div class="right-content">
+			<div id="admin">
+				<div class="head">
+					<p><i class="iconfont icon-tianjia-copy"></i><span><a href="{:U('Manager/add')}">添加管理员</a></span></p>
+				</div>
+				<!--表头-->
+				<div id="good-menu">
+					<ul>
+						<li class="nav1 nav">序号</li>
+						<li class="nav2 nav">用户名</li>
+						<li class="nav3 nav">创建时间</li>
+						<li class="nav4 nav">登录时间</li>
+						<li class="nav5 nav">登录IP</li>
+						<li class="nav6 nav">登录密码</li>
+						<li class="nav7 nav">登录状态</li>
+						<li class="nav8 nav">管理组</li>
+						<li class="nav9 nav">操作</li>
+					</ul>
+				</div>
+				<!--表的内容-->
+				<div id="itemContainer">
+				<volist name='manager' id='m'>
+					<ul>
+						<li class="nav1 nav">&nbsp;{$m.admin_id}</li>
+						<li class="nav2 nav">&nbsp;{$m.admin_name}</li>
+						<li class="nav3 nav">
+							&nbsp;{$m.add_time}
+						</li>
+						<li class="nav4 nav">
+							&nbsp;{$m.last_login}
+						</li>
+						<li class="nav5  nav" >
+							&nbsp;{$m.login_ip}	
+						</li>
+						<li class="nav6 nav">&nbsp;{$m.admin_password}</li>
+						<li class="nav7 nav">&nbsp;<if condition="$m.admin_satate eq 1 " >启用<else />禁用</if></li>
+						<li class="nav8 nav">&nbsp;{$m.role_name}</li>
+						<li class="nav9 nav">
+							<a href="{:U('Manager/edit',array('id'=>$m['admin_id']))}"><i class="iconfont icon-xiugai change "></i></a>
+							<a href="{:U('Manager/del',array('id'=>$m['admin_id']))}"><i class="iconfont icon-shanchu "></i></a>
+						</li>	
+					</ul>
+					</volist>
+				</div>
+				<div id="tap">				
+				    <div class="zs">
+						<span id="page-panel"></span>
+						<span id="page-pane2"></span>
+						<span id="page-pane3"></span>
+						<span id="page-pane4"></span>
+					</div>
+					<div class="holder" ></div>	
+		    	</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__js/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/jPages.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/fenye.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__js/systemAdmin.js" ></script>
+	</body>
+</html>

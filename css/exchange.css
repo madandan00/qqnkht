@@ -1,0 +1,139 @@
+#orderInquiry {
+  padding: 20px;
+  width: 1094px;
+  background: #fefefe; }
+  #orderInquiry .inquiryCondition {
+    overflow: hidden; }
+    #orderInquiry .inquiryCondition div {
+      width: 364px;
+      height: 20px;
+      float: left;
+      margin-bottom: 20px; }
+      #orderInquiry .inquiryCondition div span {
+        font-size: 14px;
+        margin-right: 12px;
+        display: inline-block; }
+      #orderInquiry .inquiryCondition div input {
+        border-radius: 5px;
+        outline: none;
+        width: 160px;
+        height: 20px;
+        padding: 0 5px;
+        font-size: 12px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+        box-sizing: border-box; }
+    #orderInquiry .inquiryCondition .five {
+      width: 310px; }
+      #orderInquiry .inquiryCondition .five span {
+        float: left; }
+      #orderInquiry .inquiryCondition .five input {
+        float: left;
+        width: 110px; }
+      #orderInquiry .inquiryCondition .five em {
+        float: left;
+        margin-left: -20px;
+        color: #b3da29; }
+    #orderInquiry .inquiryCondition select {
+      border-radius: 5px;
+      width: 160px;
+      height: 20px;
+      padding: 0 0 0 45px;
+      font-size: 12px;
+      outline: none;
+      border: 1px solid #999; }
+    #orderInquiry .inquiryCondition .orderTime {
+      display: inline-block;
+      width: 240px;
+      border: 1px solid #999999; }
+      #orderInquiry .inquiryCondition .orderTime input {
+        border: none; }
+  #orderInquiry .inquiry {
+    width: 150px;
+    margin: 0 auto;
+    height: 20px; }
+    #orderInquiry .inquiry input {
+      padding: 0px 7px;
+      height: 19px;
+      background-color: #b3da29;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 5px;
+      float: left;
+      border: none;
+      box-shadow: 0px 1px 1px #989996;
+      cursor: pointer; }
+    #orderInquiry .inquiry input:last-child {
+      background: #e8e8e6;
+      color: #087505;
+      float: right; }
+
+#good-menu {
+  margin-top: 20px; }
+
+.nav1 {
+  width: 50px; }
+
+.nav2 {
+  width: 120px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav3 {
+  width: 140px; }
+
+#itemContainer ul .nav3 {
+  width: 140px;
+  text-align: left; }
+  #itemContainer ul .nav3 p {
+    line-height: 25px;
+    height: 25px;
+    width: 130px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.nav4 {
+  width: 90px; }
+
+.nav5 {
+  width: 110px; }
+
+#itemContainer ul .nav5 {
+  text-align: left;
+  width: 110px; }
+  #itemContainer ul .nav5 p {
+    line-height: 25px; }
+
+.nav6 {
+  width: 40px; }
+
+.nav7 {
+  width: 80px; }
+
+.nav8 {
+  width: 95px; }
+
+.nav9 {
+  width: 95px; }
+
+.nav10 {
+  width: 120px; }
+
+.nav12 {
+  width: 80px; }
+
+.nav13 {
+  width: 70px; }
+  .nav13 i {
+    padding: 0 5px;
+    cursor: pointer; }
+  .nav13 .icon-xiugai {
+    color: #057df8; }
+  .nav13 .icon-shanchu {
+    color: #f51616; }
+
+/*# sourceMappingURL=exchange.css.map */

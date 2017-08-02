@@ -1,0 +1,282 @@
+.right-content {
+    background: #fefefe;
+}
+#reviews {
+    width: 100%;
+    .head {
+        overflow: hidden;
+        .condition {
+            float: left;
+            height: 20px;
+            span {
+                margin-right: 10px;
+                float: left;
+            }
+            input {
+                width: 110px;
+                height: 20px;
+                padding: 0 5px;
+                border-radius: 5px;
+                font-size: 12px;
+                box-sizing: border-box;
+                float: left;
+                border: 1px solid #999;
+            }
+            em {
+                margin-left: -20px;
+                color: #b3da29;
+                float: left;
+                font-size: 14px;
+            }
+            i {
+                padding: 0 10px;
+                float: left;
+                font-size: 12px;
+            }
+            button {
+                padding: 0 7px;
+                font-size: 12px;
+                height: 19px;
+                background: #b3da29;
+                color: #fff;
+                margin-left: 10px;
+                border-radius: 5px;
+                float: left;
+                box-shadow: 0px 1px 1px #989996;
+                box-sizing: border-box;
+            }
+        }
+    }
+    #good-menu {
+        margin-top: 20px;
+    }
+}
+.nav1 {
+    width: 40px;
+}
+.nav2 {
+    width: 80px;
+}
+.nav3 {
+    width: 130px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav4{
+    width: 150px;
+}
+#itemContainer ul .nav4 {
+    width: 150px;
+    text-align: left;
+    p {
+        width: 130px;
+        font-size: 12px;
+        line-height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 50px;
+    }
+}
+.nav8{
+    width:150px;
+}
+#itemContainer ul .nav8 {
+    width: 150px;
+    text-align: left;
+    p {
+        width: 130px;
+        font-size: 12px;
+        line-height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 50px;
+    }
+}
+.nav5{
+    width: 300px;
+}
+#itemContainer ul .nav5 {
+    width: 300px;
+    text-align: start;
+    img {
+        width: 50px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    img+img {
+        margin-left: 5px;
+    }
+}
+.nav6 {
+    width: 130px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav7 {
+    width: 90px;
+    i {
+        padding: 0 3px;
+        cursor: pointer;
+    }
+    .huifu {
+        color: #2d99e6;
+    }
+    .icon-shanchu {
+        color: #f51616;
+    }
+}
+#reply {
+    display: none;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 2%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -250px;
+    background: #fff;
+    border: 1px solid #e2f2c6;
+    .head {
+        padding: 10px;
+        height: 25px;
+        background: #e2f2c6;
+        line-height: 25px;
+        font-weight: bold;
+        i {
+            float: right;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    .content {
+        overflow: hidden;
+        padding-bottom: 40px;
+    }
+    .custerReview,
+    .service {
+        padding: 10px;
+        overflow: hidden;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin-top: 20px;
+        }
+        div {
+            float: left;
+        }
+    }
+    .custerReview {
+        .first {
+            width: 60px;
+            text-align: center;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .second {
+            width: 300px;
+            p {
+                width: 100%;
+                overflow: hidden;
+                font-size: 12px;
+            }
+            span {
+                float: left;
+                color: #333333;
+            }
+            i {
+                float: right;
+                color: #a1a1a1;
+                font-size: 10px;
+            }
+            .first {
+                line-height: 30px;
+            }
+            .second {
+                color: #666666;
+                line-height: 20px;
+                background: #f4f7ee;
+                padding: 10px;
+                width: 280px;
+            }
+        }
+    }
+    .choice {
+        width: 150px;
+        margin: 0 auto;
+        input {
+            width: 50px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+        input:first-child {
+            background: #b3da29;
+            color: #fff;
+        }
+        input:last-child {
+            background: #e8e8e6;
+            color: #087505;
+            margin-left: 20px;
+        }
+    }
+    .service {
+        div:last-child {
+            width: 60px;
+            text-align: center;
+            overflow: hidden;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        div:first-child {
+            width: 300px;
+            p {
+                width: 100%;
+                overflow: hidden;
+                font-size: 12px;
+            }
+            span {
+                float: right;
+                color: #333333;
+            }
+            i {
+                float: left;
+                color: #a1a1a1;
+                font-size: 10px;
+            }
+            .first {
+                line-height: 30px;
+                overflow: hidden;
+            }
+            textarea {
+                width: 300px;
+                height: 50px;
+                float: right;
+                color: #666666;
+                line-height: 20px;
+                background: #f4f7ee;
+                padding: 0 10px;
+                width: 280px;
+                border: none;
+                border-radius: 2%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

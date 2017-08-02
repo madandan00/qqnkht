@@ -1,0 +1,220 @@
+.base-info {
+  width: 100%;
+  font-size: 12px;
+  background: #f4f6f0;
+  padding-bottom: 40px; }
+  .base-info .head {
+    width: 100%;
+    height: 40px;
+    background: #e2f2c6;
+    line-height: 40px;
+    font-size: 12px; }
+    .base-info .head span {
+      margin-left: 15px; }
+  .base-info .good-info {
+    margin-top: 5px; }
+    .base-info .good-info p {
+      margin-left: 100px;
+      margin-top: 20px;
+      overflow: hidden; }
+      .base-info .good-info p span {
+        margin-right: 20px;
+        line-height: 20px;
+        float: left;
+        font-weight: normal; }
+      .base-info .good-info p input {
+        width: 180px;
+        height: 18px;
+        border: 1px solid #b3da29;
+        border-radius: 4px;
+        padding: 0 5px;
+        font-size: 12px;
+        box-sizing: border-box; }
+      .base-info .good-info p em {
+        line-height: 20px; }
+      .base-info .good-info p textarea {
+        width: 180px;
+        height: 50px;
+        padding: 0 10px;
+        font-size: 12px;
+        border: 1px solid #b3da29;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block; }
+    .base-info .good-info .first input {
+      width: 250px; }
+    .base-info .good-info .second select {
+      width: 120px;
+      height: 20px;
+      font-size: 12px;
+      border: 1px solid #b3da29;
+      border-radius: 4px; }
+    .base-info .good-info .second select + select {
+      margin-left: 30px; }
+    .base-info .good-info .thirteen,
+    .base-info .good-info .fourteen, .base-info .good-info .fifteen, .base-info .good-info .seventeen, .base-info .good-info .twenty {
+      overflow: hidden; }
+      .base-info .good-info .thirteen span,
+      .base-info .good-info .fourteen span, .base-info .good-info .fifteen span, .base-info .good-info .seventeen span, .base-info .good-info .twenty span {
+        float: left; }
+      .base-info .good-info .thirteen i,
+      .base-info .good-info .fourteen i, .base-info .good-info .fifteen i, .base-info .good-info .seventeen i, .base-info .good-info .twenty i {
+        float: left;
+        padding: 0 10px; }
+      .base-info .good-info .thirteen input,
+      .base-info .good-info .fourteen input, .base-info .good-info .fifteen input, .base-info .good-info .seventeen input, .base-info .good-info .twenty input {
+        width: 15px;
+        float: left; }
+      .base-info .good-info .thirteen b,
+      .base-info .good-info .fourteen b, .base-info .good-info .fifteen b, .base-info .good-info .seventeen b, .base-info .good-info .twenty b {
+        overflow: hidden;
+        float: left; }
+      .base-info .good-info .thirteen b + b,
+      .base-info .good-info .fourteen b + b, .base-info .good-info .fifteen b + b, .base-info .good-info .seventeen b + b, .base-info .good-info .twenty b + b {
+        margin-left: 20px; }
+      .base-info .good-info .thirteen em,
+      .base-info .good-info .fourteen em, .base-info .good-info .fifteen em, .base-info .good-info .seventeen em, .base-info .good-info .twenty em {
+        float: left;
+        margin-left: -20px;
+        color: #b3da29; }
+    .base-info .good-info .fourteen #Date1,
+    .base-info .good-info .fourteen #Date2 {
+      width: 100px; }
+    .base-info .good-info .fourteen #Date2 {
+      margin-left: 30px; }
+    .base-info .good-info .twenty #Date1,
+    .base-info .good-info .twenty #Date2 {
+      width: 100px; }
+    .base-info .good-info .fifteen {
+      overflow: hidden; }
+      .base-info .good-info .fifteen span {
+        float: left; }
+      .base-info .good-info .fifteen i {
+        float: left;
+        padding: 0 10px; }
+      .base-info .good-info .fifteen input {
+        width: 15px;
+        float: left; }
+      .base-info .good-info .fifteen b {
+        overflow: hidden;
+        float: left; }
+      .base-info .good-info .fifteen b + b {
+        margin-left: 20px; }
+    .base-info .good-info #action {
+      overflow: hidden; }
+      .base-info .good-info #action input {
+        width: 15px;
+        float: left; }
+      .base-info .good-info #action span {
+        float: left; }
+
+.pic {
+  width: 100%;
+  background: #f4f6f0;
+  padding-bottom: 30px; }
+  .pic .head {
+    width: 100%;
+    height: 40px;
+    background: #e2f2c6;
+    line-height: 40px; }
+    .pic .head span {
+      font-size: 12px;
+      margin-left: 15px;
+      font-weight: normal; }
+  .pic .mul-pic {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px; }
+    .pic .mul-pic span {
+      margin-left: 120px;
+      float: left;
+      margin-right: 20px;
+      font-size: 12px;
+      font-weight: normal; }
+    .pic .mul-pic input {
+      float: left;
+      width: 100px;
+      height: 20px;
+      margin-top: 8px;
+      font-size: 12px; }
+    .pic .mul-pic .pic-box {
+      float: left; }
+      .pic .mul-pic .pic-box .Preview {
+        border: 1px solid #b3da29; }
+      .pic .mul-pic .pic-box .pics {
+        font-weight: normal;
+        padding: 4px 15px;
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        cursor: pointer;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1; }
+        .pic .mul-pic .pic-box .pics input {
+          margin-top: 0px;
+          position: absolute;
+          font-size: 100px;
+          right: 0;
+          top: 0;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          cursor: pointer; }
+    .pic .mul-pic .pic-box + .pic-box {
+      margin-left: 20px; }
+    .pic .mul-pic textarea {
+      padding: 10px;
+      width: 580px;
+      height: 80px;
+      font-size: 12px;
+      border: 1px solid #b3da29; }
+
+.xq-operation {
+  width: 200px;
+  height: 30px;
+  margin: 30px auto;
+  background: #fefefe; }
+  .xq-operation input {
+    width: 80px;
+    height: 30px;
+    border: none;
+    box-shadow: 0px 1px 1px #989996;
+    cursor: pointer; }
+  .xq-operation input + input {
+    margin-left: 20px; }
+  .xq-operation input:first-child {
+    background: #b3da29;
+    color: #fff;
+    border-radius: 5px; }
+  .xq-operation input:last-child {
+    background: #e8e8e6;
+    color: #087505;
+    border-radius: 5px; }
+
+.Preview {
+  width: 100px;
+  height: 100px;
+  position: relative; }
+  .Preview img {
+    width: 100%;
+    height: 100%; }
+
+.mark {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: url(../img/1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 100px;
+  color: #fff; }
+
+/*# sourceMappingURL=add.css.map */

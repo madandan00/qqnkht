@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" href="css/goodClass.css" />
+		<link rel="stylesheet" href="css/addGoodTip.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_99m4ilspk8dxi529.css" />
+	</head>
+
+	<body>
+		<div class="right-content">
+			<div id="goodClass" class="clearfix">
+				<div class="head">
+					<p class="first">
+						<span>商品管理</span>&gt;<span>商品列表</span>&gt;<span class="third">商品详情</span>
+					</p>
+				</div>
+
+				<div class="content" class="clearfix">
+					
+					<form action="{:U('Goods/saveClass')}" method='post' enctype="multipart/form-data">
+						<p class="second">
+							<span>分类列表</span>
+							<select class="secondClass" name="goods_father">
+								<foreach name='goodstype' item='g'>
+									<option value="{$g.type_id}">{$g.type_name}</option>
+									<option value="{$g.type_id}">{$g.type_name}</option>
+								</foreach>
+							</select>
+							<input type="text" class="changeCon first" name='type' />
+							
+						</p>
+						<div class="pic-box" style="margin-left:440px;margin-top: 10px;">
+							<input id="imgss" name="img" type="hidden" value="">
+							<div class="Preview">
+								<div class="mark">删除</div>
+								<img id="imgs" src="">
+							</div>
+							<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath1" onchange="prePic('picPath1')" name='fiel' /></a>
+						</div>
+						<p style="margin-top: 180px;margin-left:230px;height: 40px;" class="clearfix">
+							<i id="addbtn">添加</i>
+							<input type="submit" value="修改" id="change" style="margin-left: 110px;"/>
+							<input type="reset" value="删除" id="del" class="second" />
+						</p>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="addt">
+			    <i class="iconfont icon-x close"></i>
+			    <form action="">
+				<span>添加名称</span><input name='addtype' type="text" class="addClass first" />
+				<div class="pic-box" style="margin-left: 150px;margin-top: 20px;">
+					<div class="Preview">
+						<div class="mark">删除</div>
+						<img src="">
+					</div>
+					<a href="javascript:;" class="pics">请上传图片<input type="file" id="picPath0" onchange="prePic('picPath0')" name='fie1' /></a>
+				</div>
+
+				<p style="margin-top: 180px;"><input type="submit" value="添加" id="add" class="second" />
+				<input type="reset" value="取消"  id="qx" class="third" /></p>
+				</form>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/goodClass.js"></script>
+		<script type="text/javascript" src="js/xiangqing.js"></script>
+		<script type="text/javascript" src="js/cancelPic.js"></script>
+	</body>
+
+</html>

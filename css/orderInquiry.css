@@ -1,0 +1,142 @@
+#orderInquiry {
+  padding: 20px;
+  width: 1094px;
+  background: #fefefe; }
+  #orderInquiry .inquiryCondition {
+    overflow: hidden; }
+    #orderInquiry .inquiryCondition div {
+      width: 364px;
+      height: 20px;
+      float: left;
+      margin-bottom: 20px; }
+      #orderInquiry .inquiryCondition div span {
+        font-size: 14px;
+        margin-right: 12px;
+        display: inline-block; }
+      #orderInquiry .inquiryCondition div input {
+        border-radius: 5px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        font-size: 12px;
+        outline: none;
+        width: 160px;
+        height: 20px;
+        border: 1px solid #999; }
+    #orderInquiry .inquiryCondition .five {
+      width: 310px; }
+      #orderInquiry .inquiryCondition .five span {
+        float: left; }
+      #orderInquiry .inquiryCondition .five input {
+        float: left;
+        width: 110px; }
+      #orderInquiry .inquiryCondition .five em {
+        float: left;
+        margin-left: -20px;
+        color: #b3da29;
+        font-size: 14px; }
+    #orderInquiry .inquiryCondition select {
+      border-radius: 5px;
+      width: 160px;
+      height: 20px;
+      padding: 0 0 0 45px;
+      font-size: 12px;
+      outline: none;
+      border: 1px solid #999; }
+    #orderInquiry .inquiryCondition .orderTime {
+      display: inline-block;
+      width: 240px;
+      border: 1px solid #999999; }
+      #orderInquiry .inquiryCondition .orderTime input {
+        border: none; }
+  #orderInquiry .inquiry {
+    width: 150px;
+    margin: 0 auto;
+    height: 20px; }
+    #orderInquiry .inquiry input {
+      height: 19px;
+      background-color: #b3da29;
+      color: #fff;
+      font-size: 12px;
+      padding: 0px 7px;
+      border-radius: 5px;
+      float: left;
+      box-shadow: 0px 1px 1px #989996;
+      border: none;
+      cursor: pointer; }
+    #orderInquiry .inquiry input:last-child {
+      float: right; }
+
+#good-menu {
+  margin-top: 20px; }
+
+.nav1 {
+  width: 40px; }
+
+.nav2 {
+  width: 80px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav3 {
+  width: 100px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.nav4 {
+  width: 80px; }
+
+.nav5 {
+  width: 150px; }
+  .nav5 p {
+    line-height: 25px;
+    height: 25px;
+    width: 140px;
+    float: left;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .nav5 div {
+    overflow: hidden; }
+
+.nav6 {
+  width: 50px; }
+
+.nav7 {
+  width: 40px; }
+
+.nav8 {
+  width: 60px; }
+
+.nav9 {
+  width: 90px; }
+
+.nav10 {
+  width: 160px; }
+  .nav10 p {
+    width: 150px;
+    line-height: 25px;
+    text-align: left;
+    height: 50px; }
+
+.nav11 {
+  width: 70px; }
+
+.nav12 {
+  width: 85px; }
+
+.nav13 {
+  width: 40px; }
+  .nav13 i {
+    color: #b3da29;
+    cursor: pointer; }
+
+.nav14 {
+  width: 45px; }
+
+/*# sourceMappingURL=orderInquiry.css.map */

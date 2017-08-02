@@ -1,0 +1,10 @@
+$(".Preview").on("mouseenter",function(){
+	$(this).find(".mark").show();
+})
+$(".Preview").on("mouseleave",function(){
+	$(this).find(".mark").hide();
+})
+$(".mark").on("click",function(){
+	$(this).parents(".Preview").find("img").attr("src","");
+	$(this).parents(".pic-box").find(".pics").find("input").val("");
+})

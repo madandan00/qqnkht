@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青青农客后台</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" href="css/right-public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_tgrmil42273nmi.css">
+	</head>
+	<body>
+		<!--top头部-->
+		<div id="top">
+			<div class="top">
+				<ul>
+					<li><i class="ico iconfont icon-guanliyuan"></i>超级管理员</li>
+					<li><i class="ico iconfont icon-shezhi1"></i>设置</li>
+					<li><i class="ico iconfont icon-tuichu"></i>退出</li>
+				</ul>
+			</div>
+		</div>		
+		<!--main-->
+		<div id="main">
+			<!--侧边导航-->
+			<div id="nav">
+				<ul class="nav">
+					<li class="nav_m"><em><i class="ico1 iconfont icon-goods_manage"></i>商品管理<span class="ico2 iconfont icon-arrowright"></span></em>
+						<ul class="znav">
+							<li class="goodslist zLi active" ><a class="active">商品列表</a></li>
+							<li class="lb2 zLi"><a>添加商品</a></li>
+							<li ><b class="goodClass"><i>商品分类</i><span class="ico iconfont icon-arrowright"></span></b>
+							   <ul id="goodClass2">
+							   	 <li class="active"><a>有机蔬菜</a></li>
+							   	 <li><a>生鲜水果</a></li>
+							   	 <li><a>粮油副食</a></li>
+							   	 <li><a>肉类禽蛋</a></li>
+							   </ul>
+							</li>
+							<li class="zLi"><a>商品评论</a></li>
+							<li ><b class="action"><i>活动商品</i><span class="ico iconfont icon-arrowright"></span></b>
+							   <ul id="actions">
+							   	 <li class="active"><a>上新品</a></li>
+							   	 <li><a>限时购</a></li>
+							   </ul>
+							</li>
+						</ul>
+					
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-dingdanguanli" ></i>订单管理<span class=" ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="orderlist zLi"><a>订单列表</a></li>
+							<li class="zLi"><a>商品查询</a></li>
+							<li class="zLi"><a>发货列表</a></li>
+							<li class="zLi"><a>退换货列表</a></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-caidan"></i>系统管理<span class="ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="zLi"><a>管理员列表</a></li>
+							<li ><b class="lbt"><i>广告图片管理</i><span class=" iconfont icon-arrowright"></span></b>
+							   <ul id="lbts">
+							   	 <li><a>轮播图</a></li>
+							   	 <li><a>广告图</a></li>
+							   </ul>
+							</li>
+							<li class="zLi"><a>权限管理</a></li>							
+						</ul>
+					</li>
+					<li class="nav_m"><em><i class="ico1 iconfont icon-fangbianlogin1"></i>用户管理<span class="ico2 iconfont icon-arrowright"></span></em>
+					    <ul class="znav">
+							<li class="zLi"><a>会员管理</a></li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--右侧内容-->
+			<div id="mainr">				
+				<iframe runat="server" src="goodslist.html" width="100%"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+					id="iframeId" style="height: 640px;"></iframe>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
